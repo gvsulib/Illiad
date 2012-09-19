@@ -1,0 +1,120 @@
+<#INCLUDE filename="include_header.html">
+
+<#INCLUDE filename="include_menu.html">
+
+<form action="illiad.dll" class="lib-form"method="post" name="ChangeUserInformation">
+
+<input name="ILLiadForm" type="hidden" value="ChangeUserInformation">
+<input name="NotifyGroup" type="hidden" value="E-Mail">
+<input name="WebDeliveryGroup" type="hidden" value="Yes">
+					
+<h4>Manage Your Account</h4>
+
+<div class="line">
+<!-- First Name input -->
+<div class="span2 unit left">	
+<label for="FirstName"><span class="req">*</span> <span class="<#ERROR name="ERRORFirstName">">First Name</span></label>
+<input id="FirstName" name="FirstName" tabindex="1" type="text" value="<#PARAM name="FirstName">">
+</div>
+
+<!-- Last Name input -->
+<div class="span2 unit left lastUnit">		
+<label for="LastName"><span class="req">*</span> <span class="<#ERROR name="ERRORLastName">">Last Name</span>
+<input id="LastName" name="LastName" tabindex="2" type="text" value="<#PARAM name="LastName">">
+</div>
+</div>						
+
+<!-- Status input -->
+<div class="line">
+<div class="span2 left unit">
+<label for="StatusGroup"><span class="req">*</span> <span class="<#ERROR name="ERRORStatus">">Status</span></label>
+<select id="StatusGroup" name="StatusGroup" tabindex="3">
+
+<optgroup label="Current status">						
+<option selected><#PARAM name="StatusGroup"></option>
+</optgroup>
+
+<optgroup label="Select new status">
+<option>Undergraduate</option>
+<option>Faculty</option>
+<option>Graduate</option>
+<option>Staff</option>
+</optgroup>
+
+</select>
+</div>
+<div class="span2 unit left lastUnit">
+	&nbsp;
+</div>
+</div>
+
+<div class="line">
+<!-- Email input -->
+<div class="span2 left unit">				
+<label for="EMailAddress"><span class="req">*</span> <span class="<#ERROR name="ERROREMailAddress">">Email Address</span></label>
+<input id="EMailAddress" name="EMailAddress" tabindex="4" type="text"value="<#PARAM name="EMailAddress">">						
+</div>
+					
+<!-- Phone input -->
+<div class="span2 unit left lastUnit">
+<label for="Phone"><span class="<#ERROR name="ERRORPhone">">Phone</span></label>
+<input id="Phone" name="Phone" tabindex="5" type="text" value="<#PARAM name="Phone">">						
+</div>
+</div>
+				
+<!-- Pickup Location Selector -->
+<div class="line">
+<div class="span2 left unit">
+<label for="NVTGC"><span class="req">*</span> <span class="<#ERROR name="ERRORNVTGC">">Preferred Pickup Location</span></label>
+<select id="NVTGC" name="NVTGC" tabindex="6">
+
+<optgroup label="Select new pickup location">
+<option value="JHZ" selected>Zumberge Library @ Allendale</option>
+<option value="STEEL">Steelcase Library @ De Vos</option>
+<option value="FREY">Frey Learning Center @ CHS</option>
+<option value="AWRI">Annis Water Research Institute</option>
+<option value="VARI">VanAndel Research Institute</option>
+</optgroup>
+
+<optgroup label="Distance Education?">
+<option value="OCS">Ship Books to me</option>
+</optgroup>
+
+</select>
+</div>
+</div>
+
+<div class="illiad-mailing-address">
+
+<div class="line">
+<div class="span1 unit">
+<label for="Address"><span class="req">*</span> <span class="<#ERROR name="ERRORAddress">">Address (No P.O. Boxes)</span></label>
+<input id="Address" name="Address" placeholder="Address Line 1" type="text" value="<#PARAM name="Address">" />
+</div>
+</div>						
+
+<div class="line">
+<div class="span1 unit">
+<input id="Address2" name="Address2" placeholder="Address Line 2" type="text" value="<#PARAM name="Address2">" />
+</div>
+</div>
+
+<div class="line">
+<div class="span2 unit left">
+<input id="City" name="City" placeholder="City" type="text" value="<#PARAM name="City">" />
+</div>
+<div class="span4 unit left">				
+<input id="State" name="State" placeholder="State" type="text"value="<#PARAM name="State">" />
+</div>
+<div class="span4 unit left lastUnit">
+<input id="Zip" name="Zip" type="text" placeholder="Zip" value="<#PARAM name="Zip">" />
+</div>
+</div>
+
+</div>		
+					
+<input name="SubmitButton" style="margin-top: 1em; padding: .5em 1em;" tabindex="8" type="submit" value="Submit Information" />
+
+</form>		
+
+<#INCLUDE filename="include_footer.html">

@@ -1,0 +1,10 @@
+<#INCLUDE filename="include_header.html">
+<#INCLUDE filename="include_menu.html">
+
+<p class="how-to-renew-items">To renew items, click on the transaction number.</p>
+
+<div class="lib-table">			
+<#TABLE name="ViewRenewCheckedOutItems" headerText="Checked Out Items" column="TransactionNumber:Transaction" column="Title" column="Author" column="Due Date" column="TransactionStatus:Status" noDataAction="ShowMessageRow" noDataMessage="No Items">
+</div>
+
+<#INCLUDE filename="include_footer.html">

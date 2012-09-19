@@ -1,0 +1,21 @@
+<#INCLUDE filename="include_header.html">
+<#INCLUDE filename="include_menu.html">
+
+
+
+<div class="lib-table">
+<#TABLE name="ElectronicDelivery" headerText="Digital Copies" column="View" column="Title" column="Author" column="Expires" column="Delete" noDataAction="ShowMessageRow" noDataMessage="No Electronic Articles Received" >
+<p><br />Articles are available for <strong>14 days</strong> from the date of receipt.</p>
+</div>
+<br />
+<div class="lib-table">
+<#TABLE name="ViewOutstandingRequests" headerText="Outstanding Requests" noDataAction="ShowMessageRow" noDataMessage="No Requests" column="TransactionNumber:Details" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status">
+</div>
+<br />
+<div class="lib-table">			
+<#TABLE name="ViewRenewCheckedOutItems" headerText="Checked Out Items" column="TransactionNumber:Renewals" column="Title" column="Author" column="TransactionStatus:Status" column="Due Date" noDataAction="ShowMessageRow" noDataMessage="No Items">
+</div>
+<br />
+<p><a href="<#ACTION action="10" form="60">" class="lib-button-small-grey">View All Requests</a></p>
+
+<#INCLUDE filename="include_footer.html">

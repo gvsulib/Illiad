@@ -1,0 +1,18 @@
+<#INCLUDE filename="include_header.html">
+<#INCLUDE filename="include_menu.html">
+
+<#MENU name="transaction" separator="">
+		
+<div class="lib-table">
+<#TABLE name="DetailedInformation" headerText="Transaction Information" hideColumnHeaders="true"><br />					
+</div>
+		
+<div class="lib-table">
+<#TABLE name="NotesInformation" headerText="Notes" noDataAction="ShowMessageRow" noDataMessage="No Notes" column="NoteDate:Date/Time" column="AddedBy:Added By" column="Note"><br />
+</div>
+		
+<div class="lib-table">
+<#TABLE name="TrackingInformation" headerText="Tracking" noDataAction="ShowMessageRow" noDataMessage="No Tracking"  column="DateTime:Date/Time" column="ChangedTo:Status" column="ChangedBy:Changed By"><br />
+</div>
+				
+<#INCLUDE filename="include_footer.html">

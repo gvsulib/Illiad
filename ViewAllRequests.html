@@ -1,0 +1,9 @@
+<#INCLUDE filename="include_header.html">
+<#INCLUDE filename="include_menu.html">
+ 
+<div class="lib-table">			
+<#TABLE name="ViewAllRequests" headerText="All Requests" noDataAction="ShowMessageRow" noDataMessage="No Requests" 
+				 column="TransactionNumber:Transaction" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status">
+</div>
+
+<#INCLUDE filename="include_footer.html">

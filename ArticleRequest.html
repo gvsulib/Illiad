@@ -1,6 +1,18 @@
 <#INCLUDE filename="include_header.html">
 <#INCLUDE filename="include_menu.html">
 
+<div class="line" id="tabs">
+	<div class="span1 lib-tabs" style="margin-top: 0;">
+		<ul>
+			<li class="active"><a href="illiad.dll?Action=10&amp;Form=22">Article or Book Chapter</a></li>
+			<li><a href="illiad.dll?Action=10&amp;Form=21">Book, Movie, Microfilm, etc.</a></li>
+			<li><a href="illiad.dll?Action=10&amp;Form=27">Thesis</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="lib-alert">Digital copies <b>usually take 1-3 days</b>, but can take up to 1-2 weeks.</div>
+
 <form action="illiad.dll" method="post" name="ArticleRequest" class="lib-form">
 	
 <input type="hidden" name="ILLiadForm" value="ArticleRequest" />
@@ -28,7 +40,7 @@
 <div class="line">
 <div class="span1 unit">
 <!-- Journal Title input -->					
-<label for="PhotoJournalTitle"><span class="req">*</span> <span class="<#ERROR name="ERRORPhotoJournalTitle">">Journal Title (Please do not abbreviate)</span></label>
+<label for="PhotoJournalTitle"><span class="req">*</span> <span class="<#ERROR name="ERRORPhotoJournalTitle">">Journal or Book Title (Please do not abbreviate)</span></label>
 <textarea id="PhotoJournalTitle" name="PhotoJournalTitle" tabindex="3"><#PARAM name="PhotoJournalTitle"></textarea>
 </div>
 </div>

@@ -1,6 +1,19 @@
 <#INCLUDE filename="include_header.html">
 <#INCLUDE filename="include_menu.html">
 
+<div class="line" id="tabs">
+	<div class="span1 lib-tabs" style="margin-top: 0;">
+		<ul>
+			<li><a href="illiad.dll?Action=10&amp;Form=22">Article or Book Chapter</a></li>
+			<li><a href="illiad.dll?Action=10&amp;Form=21">Book, Movie, Microfilm, etc.</a></li>
+			<li class="active"><a href="illiad.dll?Action=10&amp;Form=27">Thesis</a></li>
+		</ul>
+	</div>
+</div>
+
+
+<div class="lib-alert">Borrowing items from other libraries <b>usually takes about a week</b>, but can take longer.</div>
+
 <form action="illiad.dll" method="post" name="ThesisRequest" class="lib-form">
 <input type="hidden" name="ILLiadForm" value="ThesisRequest" />
 <input type="hidden" name="RequestType" value="Loan" />

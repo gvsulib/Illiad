@@ -8,20 +8,20 @@
 <input type="hidden" name="SessionID" value="<#PARAM name="SessionID">" />
 <input type="hidden" name="TransactionNumber" value="<#PARAM name="TransactionNumber">" />
 
-<h4>Book, Movie, Music Request</h4>
+<h2>Book, Movie, Music Request</h2>
 
 <p style="font-size: 1.2em; margin-top: -2em;"><strong>We cannot order textbooks through Document Delivery.</strong></p>
 
-<div class="line">
-<div class="span1 unit">
+<div class="row">
+<div class="span3">
 <!-- Book author input -->
 <label for="LoanAuthor"><span class="req">*</span> <span class="<#ERROR name="ERRORLoanAuthor">">Author(s) / Editor(s)</span></label>
 <input id="LoanAuthor" name="LoanAuthor" tabindex="1" type="text" value="<#PARAM name="LoanAuthor">" />
 </div>
 </div>
 
-<div class="line">
-<div class="span1 unit">
+<div class="row">
+<div class="span3">
 <!-- Book title input -->
 <label for="LoanTitle"><span class="req">*</span> <span class="<#ERROR name="ERRORLoanTitle">">Title</span></label>
 <p style="margin:0;padding:0;">Please do not abbreviate</p>
@@ -29,68 +29,53 @@
 </div>
 </div>
 
-<div class="line">
+<div class="row">
 <!-- Book publisher input -->
-<div class="span2 unit left">
+<div class="span1">
 <label for="LoanPublisher"><span class="<#ERROR name="ERRORLoanPublisher">">Publisher</span></label>
 <input id="LoanPublisher" name="LoanPublisher" tabindex="3" type="text" value="<#PARAM name="LoanPublisher">" />
 </div>
 
 <!-- Book publication place input -->
-<div class="span2 unit left lastUnit">
+<div class="span1">
 <label for="LoanPlace"><span class="<#ERROR name="ERRORLoanPlace">">Place of Publication</span></label>
 <input id="LoanPlace" name="LoanPlace" tabindex="4" type="text" value="<#PARAM name="LoanPlace">" />
 </div>
-</div>
-
-<div class="line">
 <!-- Book publication date input -->
-<div class="span4 unit left">
+<div class="span1">
 <label for="LoanDate"><span class="<#ERROR name="ERRORLoanDate">">Date of Publication</span></label>
 <input id="LoanDate" name="LoanDate" tabindex="5" type="text" value="<#PARAM name="LoanDate">" />
 </div>
-
-<!-- Book publication edition input -->
-<div class="span4 unit left>
-<label for="LoanEdition"><span class="<#ERROR name="ERRORLoanEdition">">Edition</span></input>
-<input id="LoanEdition" name="LoanEdition" tabindex="6" type="text" value="<#PARAM name="LoanEdition">" />
 </div>
 
-<!-- ISBN input -->
-<div class="span2 unit left lastUnit">
+<div class="row">
+<div class="span1">
 <label for="ISSN"><span class="<#ERROR name="ERRORISSN">"><abbr title="International Standard Book Number">ISBN</abbr> (Helps us get it faster)</span></label>
 <input id="ISSN" name="ISSN" tabindex="7" type="text" value="<#PARAM name="ISSN">" />
 </div>
-</div>
 
-<div class="line">
 <!-- OCLC or Docline UI Number -->
-<div class="span2 left unit">
+<div class="span1">
 <label for="ESPNumber"><span class="<#ERROR name="ERRORESPNumber">"><abbr title="Online Computer Library center">OCLC</abbr> or Docline <abbr title="Unique Identifier">UI</a> Number</span></label>
 <input id="ESPNumber" name="ESPNumber" tabindex="8" type="text" value="<#PARAM name="ESPNumber">">
 </div>
 
 <!-- Call number input -->
-<div class="span2 unit left lastUnit">
+<div class="span1">
 <label for="CallNumber"><span class="<#ERROR name="ERRORCallNumber">">Call Number</span></label>
 <input id="CallNumber" name="CallNumber" tabindex="9" type="text" value="<#PARAM name="CallNumber">" />
 </div>
 </div>
-<hr />
 
-<div class="line">
-<div class="span1 unit">
-<!-- Notes input -->
-<label for="Notes"><span class="<#ERROR name="ERRORNotes">">Notes</span></label>
-<p style="margin:0;padding:0;">Put any information here that may help us find the item.</p>
-<textarea id="Notes" name="Notes" tabindex="10"><#PARAM name="Notes"></textarea>
+<div class="row">
+<!-- Book publication edition input -->
+<div class="span2">
+<label for="LoanEdition"><span class="<#ERROR name="ERRORLoanEdition">">Edition</span></label>
+<input id="LoanEdition" name="LoanEdition" tabindex="6" type="text" value="<#PARAM name="LoanEdition">" />
 </div>
-</div>
-
-<div class="line">
 <!-- Alternate edition input -->
-<div class="span2 unit left">
-<label for="AcceptAlternateEdition"><span class="<#ERROR name="ERRORAcceptAlternateEdition">">Alternate edition okay?</span>
+<div class="span1">
+<label for="AcceptAlternateEdition"><span class="<#ERROR name="ERRORAcceptAlternateEdition">">Alternate edition okay?</span></label>
 <p style="margin:0;padding:0;">Specify specific edition above.</p>
 <select id="AcceptAlternateEdition" name="AcceptAlternateEdition" tabindex="11">
 
@@ -105,9 +90,17 @@
 
 </select>
 </div>
+</div>
 
+<div class="row">
+<!-- Not wanted after date -->
+<div class="span2">
+<label for="NotWantedAfter"><span class="req">*</span> <span class="<#ERROR name="ERRORNotWantedAfter">">Not Wanted After Date</span></label>
+<p style="margin:0;padding:0;">(MM/DD/YYYY)</p>
+<input id="NotWantedAfter" name="NotWantedAfter" tabindex="13" type="text" value="<#PARAM name="NotWantedAfter">" />
+</div>
 <!-- Non-English input -->
-<div class="span2 unit left lastUnit">
+<div class="span2">
 <label for="AcceptNonEnglish"><span class="<#ERROR name="ERRORAcceptNonEnglish">">Language other than English okay?</span></label>
 <p style="margin:0;padding:0;">Specify acceptable languages in the notes field.</p>
 <select id="AcceptNonEnglish" name="AcceptNonEnglish" tabindex="12">
@@ -123,19 +116,21 @@
 
 </select>
 </div>
+
 </div>
 
-<div class="line">
-<!-- Not wanted after date -->
-<div class="span2 unit left">
-<label for="NotWantedAfter"><span class="req">*</span> <span class="<#ERROR name="ERRORNotWantedAfter">">Not Wanted After Date</span></label>
-<p style="margin:0;padding:0;">(MM/DD/YYYY)</p>
-<input id="NotWantedAfter" name="NotWantedAfter" tabindex="13" type="text" value="<#PARAM name="NotWantedAfter">" />
-</div>
-<div class="span2 unit left lastUnit">
-	&nbsp;
+
+<div class="row">
+<div class="span3">
+<!-- Notes input -->
+<label for="Notes"><span class="<#ERROR name="ERRORNotes">">Notes</span></label>
+<p style="margin:0;padding:0;">Put any information here that may help us find the item.</p>
+<textarea id="Notes" name="Notes" tabindex="10"><#PARAM name="Notes"></textarea>
 </div>
 </div>
+
+
+
 <hr />
 
 <#INCLUDE filename="include_request_cited.html">                

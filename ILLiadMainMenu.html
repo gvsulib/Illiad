@@ -4,20 +4,19 @@
 <div id="main_menu">
 
 <div class="lib-table" id="electronic-articles">
-<#TABLE name="ElectronicDelivery" headerText="Digital Copies" column="View" column="Title" column="Author" column="Expires" column="Delete" noDataAction="ShowMessageRow" noDataMessage="No Electronic Articles Received" >
+<#TABLE name="ElectronicDelivery" headerText="Digital Copies" column="TransactionNumber:Details" column="View" column="Title" column="Author" column="Expires" column="Delete" noDataAction="ShowMessageRow" noDataMessage="No Electronic Articles Received" >
 <p><br />Articles are available for <strong>14 days</strong> from the date of receipt.</p>
 </div>
-<br />
 <div class="lib-table" id="outstanding-requests">
 <#TABLE name="ViewOutstandingRequests" headerText="Outstanding Requests" noDataAction="ShowMessageRow" noDataMessage="No Requests" column="TransactionNumber:Details" column="DocumentType:Type" column="Title" column="Author" column="TransactionStatus:Status">
-</div>
 <br />
+</div>
 <div class="lib-table" id="checkedout-items">			
 <#TABLE name="ViewRenewCheckedOutItems" headerText="Checked Out Items" column="TransactionNumber:Renewals" column="Title" column="Author" column="TransactionStatus:Status" column="Due Date" noDataAction="ShowMessageRow" noDataMessage="No Items">
-<p><br /><b>Missing something?</b> If you renew an item, it won't show up as checked out until the request is sent to the library we borrowed it from.</p>
-</div>
 <br />
-<p><a href="<#ACTION action="10" form="60">" class="lib-button-small-grey">View All Requests</a></p>
+</div>
+<p><b>Missing something?</b> If you renew an item, it won't show up as checked out until the request is sent to the library we borrowed it from.</p>
+<p><a href="<#ACTION action="10" form="60">" class="btn btn-default">View All Requests</a></p>
 
 </div>
 

@@ -1,17 +1,8 @@
 <#INCLUDE filename="include_header.html">
 <#INCLUDE filename="include_menu.html">
 
-<div class="line" id="tabs">
-	<div class="span1 lib-tabs" style="margin-top: 0;">
-		<ul>
-			<li class="active"><a href="illiad.dll?Action=10&amp;Form=22">Article or Book Chapter</a></li>
-			<li><a href="illiad.dll?Action=10&amp;Form=21">Book, Movie, Microfilm, etc.</a></li>
-			<li><a href="illiad.dll?Action=10&amp;Form=27">Thesis</a></li>
-		</ul>
-	</div>
-</div>
+<div class="alert alert-info">Digital copies <b>usually take 1-3 days</b>, but can take up to 1-2 weeks.</div>
 
-<div class="lib-alert">Digital copies <b>usually take 1-3 days</b>, but can take up to 1-2 weeks.</div>
 
 <form action="illiad.dll" method="post" name="ArticleRequest" class="lib-form">
 	
@@ -19,82 +10,82 @@
 <input type="hidden" name="Username" value="<#PARAM name="Username">" />
 <input type="hidden" name="SessionID" value="<#PARAM name="SessionID">" />
 		
-<h4>Digital Copy Request</h4>
+<h2>Digital Copy Request</h2>
 
-<div class="line">
-<div class="span1 unit">
+<div class="row">
+<div class="span3">
 <!-- Article Author input -->
 <label for="PhotoArticleAuthor"><span class="<#ERROR name="ERRORPhotoArticleAuthor">">Article Author</span></label>
 <input class="f-name" id="PhotoArticleAuthor" name="PhotoArticleAuthor" tabindex="1" type="text" value="<#PARAM name="PhotoArticleAuthor">" />						
 </div>
 </div>
 
-<div class="line">
-<div class="span1 unit">
+<div class="row">
+<div class="span3">
 <!-- Article Title input -->
 <label for="PhotoArticleTitle"><span class="req">*</span> <span class="<#ERROR name="ERRORPhotoArticleTitle">">Article or Book Chapter Title</span></label>
 <textarea id="PhotoArticleTitle" name="PhotoArticleTitle" tabindex="2"><#PARAM name="PhotoArticleTitle"></textarea>
 </div>
 </div>
 
-<div class="line">
-<div class="span1 unit">
+<div class="row">
+<div class="span3">
 <!-- Journal Title input -->					
-<label for="PhotoJournalTitle"><span class="req">*</span> <span class="<#ERROR name="ERRORPhotoJournalTitle">">Journal or Book Title (Please do not abbreviate)</span></label>
+<label for="PhotoJournalTitle"><span class="req">*</span> <span class="<#ERROR name="ERRORPhotoJournalTitle">">Journal Title (Please do not abbreviate)</span></label>
 <textarea id="PhotoJournalTitle" name="PhotoJournalTitle" tabindex="3"><#PARAM name="PhotoJournalTitle"></textarea>
 </div>
 </div>
 
 <!-- Journal details row -->
-<div class="line">
+<div class="row">
 <!-- Volume input -->
-<div class="span4 unit left">
+<div class="span1">
 <label for="PhotoJournalVolume"><span class="req">*</span> <span class="<#ERROR name="ERRORPhotoJournalVolume">">Volume</span></label>
 <input id="PhotoJournalVolume" name="PhotoJournalVolume" tabindex="4" type="text" value="<#PARAM name="PhotoJournalVolume">" />						
 </div>
 
 <!-- Issue input -->
-<div class="span4 unit left">
+<div class="span1">
 <label for="PhotoJournalIssue"><span class="req">*</span> <span class="<#ERROR name="ERRORPhotoJournalIssue">">Issue Number</span></label>
 <input id="PhotoJournalIssue" name="PhotoJournalIssue" tabindex="5" type="text" value="<#PARAM name="PhotoJournalIssue">" />
 </div>
 
+<!-- Pages input -->	
+<div class="span1">
+<label for="PhotoJournalInclusivePages"><span class="req">*</span> <span class="<#ERROR name="ERRORPhotoJournalInclusivePages">">Pages</span></label>
+<input id="PhotoJournalInclusivePages" name="PhotoJournalInclusivePages" tabindex="8" type="text" value="<#PARAM name="PhotoJournalInclusivePages">" />
+</div>
+</div>
+
+<div class="row">
 <!-- Month input -->
-<div class="span4 unit left">						
+<div class="span1">						
 <label for="PhotoJournalMonth"><span class="<#ERROR name="ERRORPhotoJournalMonth">">Month</span></label>
 <input id="PhotoJournalMonth" name="PhotoJournalMonth" tabindex="6" type="text" value="<#PARAM name="PhotoJournalMonth">" />
 </div>
 
 <!-- Year input -->					
-<div class="span4 unit left lastUnit">
+<div class="span1">
 <label for="PhotoJournalYear"><span class="req">*</span> <span class="<#ERROR name="ERRORPhotoJournalYear">">Year</span></label>
 <input id="PhotoJournalYear" name="PhotoJournalYear" tabindex="7" type="text" value="<#PARAM name="PhotoJournalYear">" />
 </div>
+
+
 </div>
 
-<div class="line">
-<!-- Pages input -->					
-<div class="span2 unit left">
-<label for="PhotoJournalInclusivePages"><span class="req">*</span> <span class="<#ERROR name="ERRORPhotoJournalInclusivePages">">Pages</span></label>
-<input id="PhotoJournalInclusivePages" name="PhotoJournalInclusivePages" tabindex="8" type="text" value="<#PARAM name="PhotoJournalInclusivePages">" />
-</div>
-
+<div class="row">
 <!-- ISSN input -->
-<div class="span2 unit left lastUnit">					
-<label for="ISSN"><span class="<#ERROR name="ERRORISSN">"><abbr title="International Standard Serial Number">ISSN</abbr> or <abbr title="International Standard Book Number">ISBN</abbr></span> (Helps us get it faster)</label>
-<input id="ISSN" name="ISSN" tabindex="9" type="text" value="<#PARAM name="ISSN">" />
+<div class="span1">					
+<label for="ISSN"><span class="<#ERROR name="ERRORISSN">"><abbr title="International Standard Serial Number">ISSN</abbr> or <abbr title="International Standard Book Number">ISBN</abbr></span></label>
+<input id="ISSN" name="ISSN" tabindex="9" type="text" value="<#PARAM name="ISSN">" placeholder="This helps us get the item faster" />
 </div>
-</div>
-
-<div class="line">
 <!-- OCLC Number label -->
-<div class="span2 unit left">
+<div class="span1">
 <label for="ESPNumber"><span class="<#ERROR name="ERRORESPNumber">"><abbr title="Online Computer Library Center">OCLC</abbr> or Docline <abbr title="Unique Identifier">UI</abbr> Number</span></label>
 <input id="ESPNumber" name="ESPNumber" tabindex="10" type="text" value="<#PARAM name="ESPNumber">" />
 </div>
-
 <!-- Call Number label -->
-<div class="span2 unit left lastUnit">
+<div class="span1">
 <label for="CallNumber"><span class="<#ERROR name="ERRORCallNumber">">Call Number</span></label>
 <input id="CallNumber" name="CallNumber" tabindex="11" type="text"value="<#PARAM name="CallNumber">" />
 </div>
@@ -102,25 +93,16 @@
 
 <hr />
 
-<!-- Notes input -->
-<div class="line">
-<div class="span1 unit">				
-<label for="Notes"><span class="<#ERROR name="ERRORNotes">">Notes</span></label>
-<p style="margin: 0;padding:0;">Put any information here that may help us find the item.</p>
-<textarea id="Notes" name="Notes" tabindex="12"><#PARAM name="Notes"></textarea>
-</div>
-</div>
-
-<div class="line">
+<div class="row">
 <!-- Not Wanted After Input -->
-<div class="span2 unit left">
+<div class="span1">
 <label for="NotWantedAfter"><span class="req">*</span> <span class="<#ERROR name="ERRORNotWantedAfter">">Not Wanted After Date</span></label>
 <p style="margin:0;padding:0;">(MM/DD/YYYY)</p>
 <input id="NotWantedAfter" name="NotWantedAfter" tabindex="13" type="text" value="<#PARAM name="NotWantedAfter">" />
 </div>
 
 <!-- Non-English input -->					
-<div class="span2 unit left lastUnit">
+<div class="span2">
 <label for="AcceptNonEnglish"><span class="<#ERROR name="ERRORAcceptNonEnglish">">Language other than English okay?</span></label>
 <p style="margin:0;padding:0">Specify acceptable languages in the notes field.</p>
 
@@ -138,6 +120,17 @@
 
 </div>
 </div>
+
+<!-- Notes input -->
+<div class="row">
+<div class="span3">				
+<label for="Notes"><span class="<#ERROR name="ERRORNotes">">Notes</span></label>
+<p style="margin: 0;padding:0;">Put any information here that may help us find the item.</p>
+<textarea id="Notes" name="Notes" tabindex="12"><#PARAM name="Notes"></textarea>
+</div>
+</div>
+
+
 					
 <hr />
 <#INCLUDE filename="include_request_cited.html">                

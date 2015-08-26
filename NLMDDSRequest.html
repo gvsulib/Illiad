@@ -1,0 +1,39 @@
+  <#INCLUDE filename="include_header_request.html">
+  <div id="content-wrap">
+  	<#INCLUDE filename="include_menu.html">
+    <div id="content">
+		<form action="illiad.dll" method="post" name="NLMDDSRequest" class="f-wrap-request">
+			<input type="hidden" name="ILLiadForm" value="NLMDDSRequest">
+			<input type="hidden" name="Username" value="<#PARAM name="Username">">
+			<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
+				<div class="req"><b>*</b> Indicates required field</div>
+				<fieldset>			
+					<h3>NLM Document Delivery Service Requests</h3>
+					<#STATUS>
+					<h2>Common Request Information</h2>	
+					Note: The account number and notes will be used for all of the submitted requests unless indivudally overriden below.		
+					
+					<label for="ValidAccountsDropDown">
+						<span class="field">
+							<span class="<#ERROR name="ERRORValidAccountsDropDown">"><b>Account Number</b></span>
+						</span>
+						<select id="ValidAccountsDropDown" name="ValidAccountsDropDown" size="1" class="f-name" tabindex="14">
+							<#OPTION name="ValidAccounts">
+						</select><br />
+					</label>
+					
+					<label for="Notes">
+						<span class="field">
+							<span class="<#ERROR name="ERRORNotes">"><b>Notes</b></span><br />
+							<span class="note">Put any information here that may help us find these items, as well as any other pertinent information.</span>
+						</span>
+						<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" tabindex="15"><#PARAM name="Notes"></textarea><br />
+					</label>
+					
+					<h2>Requests</h2>
+					<#PARAM name="NLMDDSRequests">
+					               
+                    <#INCLUDE filename="include_request_buttons.html">
+				</fieldset>
+		</form>		
+      	<#INCLUDE filename="include_footer.html">

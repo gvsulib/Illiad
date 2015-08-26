@@ -1,0 +1,35 @@
+<#INCLUDE filename="include_header.html">
+<#INCLUDE filename="include_menu.html">
+<body background="images/sandston.jpg" bgcolor="#FFFFFF">
+
+<form method="POST" action="illiad.dll">
+    <input type="hidden" name="SessionID" value="CGIFN=^VARSessionID^"><input type="hidden" name="ILLiadForm"
+    value="LendingViewOutstandingRequests"><input type="hidden"
+    name="Username" value="CGIFN=^VARUsername^">
+<input type="hidden" name="WebSessionLogoutPage" value="LendingLogon2.html">
+<table border="0"
+    width="100%">
+        <tr>
+            <td colspan="2" width="75%" bgcolor="#990000"><font
+            color="#FFFFFF" size="5" face="Arial"><img
+            src="images/Edit.gif" width="32" height="32">View/Edit
+            Outstanding Requests for CGIFN=^VARUsername^</font></td>
+            <td align="center" width="25%" bgcolor="#990000"><img
+            src="images/MainMenu.gif" width="32" height="32"><font
+            color="#FFFFFF"><input type="submit"
+            name="SubmitButton" value="Exit to Main Menu"></font></td>
+        </tr>
+    </table>
+    <table border="0" width="100%">
+        <tr>
+            <td valign="top" width="10%" bgcolor="#C0C0C0"><font
+            face="Arial"><strong>Status</strong></font></td>
+            <td colspan="2" width="90%" bgcolor="#C0C0C0"><font
+            face="Arial"><em>CGIFN=^StatusLine^</em></font></td>
+        </tr>
+    </table>
+    
+  <p>CGIFN=^VARViewOutstandingLendingRequests^</p>
+    <p>&nbsp;</p>
+</form>
+<#INCLUDE filename="include_footer.html">

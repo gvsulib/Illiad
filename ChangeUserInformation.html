@@ -7,27 +7,42 @@
 <input name="NotifyGroup" type="hidden" value="E-Mail" />
 <input name="WebDeliveryGroup" type="hidden" value="Yes" />
 					
-<h4>Manage Your Account</h4>
+<h2>Manage Your Account</h2>
 
-<div class="line">
+<div class="row">
 
 	<!-- First Name input -->
-	<div class="span2 unit left">	
+	<div class="span1">	
 	<label for="FirstName"><span class="req">*</span> <span class="<#ERROR name="ERRORFirstName">">First Name</span></label>
 	<input id="FirstName" name="FirstName" tabindex="1" type="text" value="<#PARAM name="FirstName">">
 	</div> 
 
 	<!-- Last Name input -->
-	<div class="span2 unit left lastUnit">		
+	<div class="span1">		
 	<label for="LastName"><span class="req">*</span> <span class="<#ERROR name="ERRORLastName">">Last Name</span></label>
 	<input id="LastName" name="LastName" tabindex="2" type="text" value="<#PARAM name="LastName">">
 	</div>
+
 </div>
 
-
+<div class="row">
+	<!-- Email input -->
+	<div class="span1">				
+	<label for="EMailAddress"><span class="req">*</span> <span class="<#ERROR name="ERROREMailAddress">">Email Address</span></label>
+	<input id="EMailAddress" name="EMailAddress" tabindex="4" type="text" value="<#PARAM name="EMailAddress">">						
+	</div>
+					
+	<!-- Phone input -->
+	<div class="span1">
+	<label for="Phone"><span class="<#ERROR name="ERRORPhone">">Phone</span></label>
+	<input id="Phone" name="Phone" tabindex="5" type="text" value="<#PARAM name="Phone">">						
+	</div>
+</div>
+				
+<!-- Pickup Location Selector -->
+<div class="row">
 <!-- Status input -->
-<div class="line">
-	<div class="span1 unit">
+	<div class="span1">
 		<label for="StatusGroup"><span class="req">*</span> <span class="<#ERROR name="ERRORStatus">">Status</span></label>
 		<select id="StatusGroup" name="StatusGroup" tabindex="3">
 
@@ -44,25 +59,7 @@
 
 		</select>
 	</div>
-</div>
-
-<div class="line">
-	<!-- Email input -->
-	<div class="span2 left unit">				
-	<label for="EMailAddress"><span class="req">*</span> <span class="<#ERROR name="ERROREMailAddress">">Email Address</span></label>
-	<input id="EMailAddress" name="EMailAddress" tabindex="4" type="text" value="<#PARAM name="EMailAddress">">						
-	</div>
-					
-	<!-- Phone input -->
-	<div class="span2 left unit lastUnit">
-	<label for="Phone"><span class="<#ERROR name="ERRORPhone">">Phone</span></label>
-	<input id="Phone" name="Phone" tabindex="5" type="text" value="<#PARAM name="Phone">">						
-	</div>
-</div>
-				
-<!-- Pickup Location Selector -->
-<div class="line">
-	<div class="span1 unit">
+	<div class="span2">
 		<label for="NVTGC"><span class="req">*</span> <span class="<#ERROR name="ERRORNVTGC">">Preferred Pickup Location for Books and Theses</span></label>
 		<p>Articles and book chapters are delivered by email.</p>
 		<select id="NVTGC" name="NVTGC" tabindex="6">
@@ -89,30 +86,31 @@
 
 <div class="illiad-mailing-address">
 
-<div class="line">
-	<div class="span1 unit">
+<div class="row">
+
+	<div class="span3">
 		<label for="Address"><span class="req">*</span> <span class="<#ERROR name="ERRORAddress">">Address (No P.O. Boxes)</span></label>
 		<input id="Address" name="Address" placeholder="Address Line 1" type="text" value="<#PARAM name="Address">" /><br />						
 	</div>
 </div>
-<div class="line">
-	<div class="span1 unit">
+<div class="row">
+	<div class="span3">
 		<input id="Address2" name="Address2" placeholder="Address Line 2" type="text" value="<#PARAM name="Address2">" /><br />
 	</div>
 </div>
 
-<div class="line">
-	<div class="span2 unit left">
+<div class="row">
+	<div class="span1">
 		<label for="City">City</label>
 		<input id="City" name="City" type="text" value="<#PARAM name="City">" />
 	</div>
 	
-	<div class="span4 unit left">	
+	<div class="span1">	
 		<label for="State">State</label>
 		<input id="State" name="State" type="text" value="<#PARAM name="State">" />
 	</div>
 	
-	<div class="span4 unit left lastUnit">
+	<div class="span1">
 		<label for="Zip">Zip</label>
 		<input id="Zip" name="Zip" type="text" value="<#PARAM name="Zip">" /><br />
 	</div>

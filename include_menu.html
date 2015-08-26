@@ -1,51 +1,22 @@
 
-<style>
-.lib-subnav .list { display: none; }
-.lib-subnav:hover .list { display: block; }
-
-#lib-subnav-toggle { width: auto; padding: .8em;}
-
-@media screen and (min-width: 48em) {
-#lib-subnav-toggle { display: none;}
-.lib-subnav .list { display: block;}
-.lib-subnav:hover .list { display: static; }
-.lib-subnav ul li:hover ul {display: block;}
-
-}
-</style>
-
-<h3><a href="<#ACTION action="10" form="10">">Document Delivery</a></h3>
-
-<a href="#main" class="skip">Skip navigation</a>
+<h1><a href="<#ACTION action="10" form="10">">Document Delivery</a></h1>
+<a href="#main" class="hide-accessible">Skip navigation</a>
+<div class="lib-horizontal-list right" id="lib-settings-menu">
+	<ul>
+		<li><a href="<#ACTION action="10" form="66">" id="lib-renew-link">Renew Items</a></li>
+		<li><a href="<#ACTION action="10" form="81">">Manage Account</a></li>
+		<li><a class="logout-link" href="<#ACTION action="99">">Log Out</a></li>
+	</ul>
+</div><!-- End #lib-settings-menu -->
+<div class="cms-clear"></div>
 
 <div id="sub-navigation">
-	<div class="lib-horizontal-list right" id="lib-settings-menu">
-		<ul>
-			<li class="first"><a href="<#ACTION action="10" form="81">">Manage Account</a></li>
-			<li><a class="logout-link" href="<#ACTION action="99">">Log Out</a></li>
-		</ul>
-	</div> 
-	
-	<div class="gvsu-clear"></div>
 
-	<div class="lib-subnav span1">
-		<div id="lib-subnav-wrap">
-		<ul>
-			<li><span class="lib-trigger">Request Item &#9660;</span>
-				<ul>
-					<li class="first"><a href="<#ACTION action="10" form="22">">Digital Copy (journal article, book chapter, etc.)</a></li>
-					<li><a href="<#ACTION action="10" form="21">">Book, Movie, Music, Microfilm, etc.</a></li>
-					<li><a href="<#ACTION action="10" form="27">">Thesis</a></li>
-				</ul>
-			</li>
-			<li><a href="<#ACTION action="10" form="10">">View Items</a></li>
-			<li><a href="<#ACTION action="10" form="66">" id="lib-renew-link">Renew Items</a></li>
-		</ul>
-	</div>
-	</div>
-</div> 
+<a class="btn btn-default" href="<#ACTION action="10" form="22">">Request an Article or Book chapter</a>
+<a class="btn btn-default" href="<#ACTION action="10" form="21">">Request a Book, Movie, Music, Microfilm, etc.</a>
+<a class="btn btn-default" href="<#ACTION action="10" form="27">">Request a Thesis</a>
 
-<div class="gvsu-clear"></div>
+</div><!-- End #sub-navigation -->
 
 <div id="status"><#STATUS></div>
 <div id="main">

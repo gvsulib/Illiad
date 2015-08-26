@@ -1,149 +1,79 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>University Libraries - Grand Valley State University</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Document Delivery - University Libraries - Grand Valley State University</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta name="description" content="Document Delivery at the GVSU University Libraries gives researches access to materials from thousands of libraries around the world, free of charge.">
+		<meta name="keywords" content="ill, interlibrary loan, document delivery, gvsu, grand valley, library, libraries, doc del, research tools">
 
-		<meta name="description" content="The University Libraries provide a comprehensive overview of resources and tools available for research within the university community.">
-		<meta name="keywords" content="research, writing, literacy, services">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="fonts/fonts.css" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<style>
 
-		<link type="text/css" rel="stylesheet" href="https://secure.gvsu.edu/cms3/skeleton_32/files/css/base.css">
 
-
-		<style type="text/css">
-			
-			/* NAVIGATION */
-			#navigation ul li a {border-bottom: 1px solid #CCC;background-color: #0065a4;;color: #FFF;}
-			#navigation-footer {border-top: 1px solid #CCC;}
-			#navigation-contact {border-bottom: 1px solid #CCC;}
-			#navigation li .navparent {background-image: url(data:image/gif;base64,R0lGODlhCAAIAIABAP///////yH5BAEAAAEALAAAAAAIAAgAAAIKjAOne8ma4pv0FAA7);}
-			#navigation li li .navparent {background-image: url(data:image/gif;base64,R0lGODlhCAAIAIABAP///////yH5BAEAAAEALAAAAAAIAAgAAAIKjAOne8ma4pv0FAA7);}
-			
-			/* For IE 6/7's lack of compliance. It works in IE8 without this */
-			#navigation-menu {.z-index: 1;}
-			
-			/* Root Menu Hover Persistence */
-			#navigation ul#navigation-menu a:hover,
-			#navigation ul#navigation-menu li:hover a,
-			#navigation ul#navigation-menu li.iehover a {background-color: #70A9C6;color: #FFF;}
-			
-			/* 2nd Menu */
-			#navigation ul#navigation-menu li:hover li a,
-			#navigation ul#navigation-menu li.iehover li a {border-bottom: 1px solid #CCC;background-color: #004E81;color: #FFF;}
-			
-			/* 2nd Menu Hover Persistence */
-			#navigation ul#navigation-menu li:hover li a:hover,
-			#navigation ul#navigation-menu li:hover li:hover a,
-			#navigation ul#navigation-menu li.iehover li a:hover,
-			#navigation ul#navigation-menu li.iehover li.iehover a {background-color: #70A9C6;color: #FFF;}
-			
-			/* ADDITIONAL CMS STYLESHEETS I'M OVERRIDING INLINE TO REDUCE SERVER HITS */
-			#gvsu-header-wrapper div,#gvsu-header-wrapper span,#gvsu-header-wrapper object,#gvsu-header-wrapper iframe,#gvsu-header-wrapper h1,#gvsu-header-wrapper h2,#gvsu-header-wrapper h3,#gvsu-header-wrapper h4,#gvsu-header-wrapper h5,#gvsu-header-wrapper h6,#gvsu-header-wrapper p,#gvsu-header-wrapper blockquote,#gvsu-header-wrapper pre,#gvsu-header-wrapper abbr,#gvsu-header-wrapper address,#gvsu-header-wrapper cite,#gvsu-header-wrapper code,#gvsu-header-wrapper del,#gvsu-header-wrapper dfn,#gvsu-header-wrapper em,#gvsu-header-wrapper img,#gvsu-header-wrapper ins,#gvsu-header-wrapper kbd,#gvsu-header-wrapper q,#gvsu-header-wrapper samp,#gvsu-header-wrapper small,#gvsu-header-wrapper strong,#gvsu-header-wrapper sub,#gvsu-header-wrapper sup,#gvsu-header-wrapper var,#gvsu-header-wrapper b,#gvsu-header-wrapper i,#gvsu-header-wrapper dl,#gvsu-header-wrapper dt,#gvsu-header-wrapper dd,#gvsu-header-wrapper ol,#gvsu-header-wrapper ul,#gvsu-header-wrapper li,#gvsu-header-wrapper fieldset,#gvsu-header-wrapper form,#gvsu-header-wrapper label,#gvsu-header-wrapper legend,#gvsu-header-wrapper table,#gvsu-header-wrapper caption,#gvsu-header-wrapper tbody,#gvsu-header-wrapper tfoot,#gvsu-header-wrapper thead,#gvsu-header-wrapper tr,#gvsu-header-wrapper th,#gvsu-header-wrapper td,#gvsu-header-wrapper time,#gvsu-header-wrapper mark,#gvsu-header-wrapper audio,#gvsu-header-wrapper video { margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent; } 
-			#gvsu-header-wrapper { line-height:1; }
-			#gvsu-header-wrapper article,#gvsu-header-wrapper aside,#gvsu-header-wrapper details,#gvsu-header-wrapper figcaption,#gvsu-header-wrapper figure,#gvsu-header-wrapper footer,#gvsu-header-wrapper header,#gvsu-header-wrapper hgroup,#gvsu-header-wrapper menu,#gvsu-header-wrapper nav,#gvsu-header-wrapper section { display:block; }
-			#gvsu-header-wrapper nav ul { list-style:none; }
-			#gvsu-header-wrapper blockquote, #gvsu-header-wrapper q { quotes:none; }
-			#gvsu-header-wrapper blockquote:before,#gvsu-header-wrapper blockquote:after,#gvsu-header-wrapper q:before,#gvsu-header-wrapper q:after { content:'';content:none; }
-			#gvsu-header-wrapper a { margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent; }
-			#gvsu-header-wrapper table { border-collapse:collapse;border-spacing:0; }
-
-			/* LAYOUT */
-			.gvsu-clear {clear: both;}
-			body {background-color: #88B3DA;margin: 0;padding: 0;}
-			#gvsu-header-wrapper {background: #0065a4;color: #363636;font-family: Arial, Helvetica, sans-serif;width: 100%;text-align: center;}
-			#gvsu-header-wrapper #gvsu-search_bar {display: none;} /* Hide People Finder Search Bar */
-			#gvsu-header-wrapper #gvsu-header {margin: 0 auto;}
-			#gvsu-header-wrapper #gvsu-logo {padding: 1.167em 0 0.75em 0.25em; margin: 0;float: left;margin-left: .5em;}
-
-			*/FORMS */
-			.lib-simple-form input[type="text"] { height: 2.5em !important; }
-			
-			/* FOOTER */
-			#gvsu-footer-wrapper #gvsu-footer {width: 100%;margin: 0;background-color: #535353;color: #c3c2c2;}
-			#gvsu-footer-wrapper #gvsu-contact_info, 
-			#gvsu-footer-wrapper #gvsu-footer_links {float: left;width: 23.49336057201226%; line-height: 1.6em;padding: 3.33em 0; }
-			#gvsu-footer-wrapper #gvsu-contact_info {padding-left: 2.5em;}
-			#gvsu-footer-wrapper #gvsu-footer_links p {line-height: 1.8em;}
-			#gvsu-footer-wrapper #gvsu-footer a {color: #fff;}
-			#gvsu-footer-wrapper #gvsu-footer_secondary {width: 100%;margin: 0;padding: 1.417em 0; background-color: #3d3d3d;color: #fff;height: 1.417em;}
-			#gvsu-footer-wrapper #gvsu-disclaimers_copyright {float: right;padding: 0.25em 0.833em 0 0; margin: 0;text-align: right;width: 65.5%;color: #b3b3b3;}
-			#gvsu-footer-wrapper .gvsu-disclaimer {padding-right: 1.667em; }#gvsu-footer-wrapper .gvsu-disclaimer a {color: #b3b3b3;text-decoration: none;}
-
-			@media screen and (min-width: 56.25em) { /* Show "Desktop" styles on large screen */
-			
-			#gvsu-footer-wrapper td.gvsu-mobile,
-			#gvsu-footer-wrapper th.gvsu-mobile,
-			#gvsu-footer-wrapper td.gvsu-tablet,
-			#gvsu-footer-wrapper th.gvsu-tablet,
-			#gvsu-footer-wrapper .gvsu-mobile,
-			#gvsu-footer-wrapper .gvsu-tablet,
-			#gvsu-footer-wrapper #gvsu-navigation_bar #gvsu-navigation_icons li.gvsu-tablet,
-			#gvsu-footer-wrapper #gvsu-navigation_bar #gvsu-navigation_icons li.gvsu-mobile {display: none;}
-			#gvsu-footer-wrapper .gvsu-desktop {display: inline;display: inherit;}
-			#gvsu-footer-wrapper td.gvsu-desktop,
-			#gvsu-footer-wrapper th.gvsu-desktop {display: table-cell;}
-			#gvsu-footer-wrapper table.gvsu-desktop {display: table;}
-			#gvsu-footer-wrapper .gvsu-desktop,
-			#gvsu-footer-wrapper #gvsu-navigation_bar #gvsu-navigation_icons li.gvsu-desktop {display: inline;}
-
-			}
-			#navigation-footer { padding: 0 !important; }
-		</style>
-
-		<link rel="stylesheet" type="text/css" href="https://secure.gvsu.edu/cms3/assets/741ECAAE-BD54-A816-71DAF591D1D7955C/gvsu-lib-styles-new.css">
-		<link rel="stylesheet" href="fonts/fonts.css" type="text/css">
-		<!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="https://secure.gvsu.edu/cms3/assets/741ECAAE-BD54-A816-71DAF591D1D7955C/gvsu-lib-styles-ie.css" /><![endif]-->
-		<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="https://secure.gvsu.edu/cms3/assets/741ECAAE-BD54-A816-71DAF591D1D7955C/gvsu-lib-styles-ie7.css" /><script language="javascript" src="https://secure.gvsu.edu/cms3/skeleton_32/files/js/navigation_ie.js" type="text/javascript"></script><![endif]-->
-		
+	</style>
 </head>
 <body>
 		
-	<div id="wrapper">
-		<div id="content">
-			
-			<div id="gvsu-header-wrapper">
-				<div id="gvsu-header">
-					<div id="gvsu-logo">
-						<a href="http://gvsu.edu/"><img src="https://secure.gvsu.edu/homepage/files/img/gvsu_logo.png" alt="Grand Valley State University" border="0"></a>
-					</div><!-- End #gvsu-logo -->
-				</div><!-- End #gvsu-header -->
+	<div id="gvsu-cf_header" class="responsive">
+		<div id="gvsu-cf_header-inner">
+			<div id="gvsu-cf_header-logo">
+				<a href="http://gvsu.edu/">
+					<img src="//gvsu.edu/includes/topbanner/3/gvsu_logo.png" alt="Grand Valley State University">
+				</a>
+			</div><!-- End #gvsu-cf_header-logo -->
+		</div><!-- End #gvsu-cf_header-inner -->
+	</div><!-- End #gvsu-cf_header -->
+
+	<div id="cms-header-wrapper">
+		<div id="cms-header">
+			<div id="cms-header-inner">
+				<a id="cms-navigation-toggle" href="cms-siteindex-index.htm" onclick="return cmsToggleMenu(document.getElementById('cms-navigation'))">
+					<img src=" //gvsu.edu/cms4/skeleton/0/files/img/transparent.png" alt="Menu">
+				</a>
+				<h1>
+					<a href="/library_new">University Libraries</a>
+				</h1>
+				<div id="library-search">
+					<form action="http://gvsu.summon.serialssolutions.com/search">
+						<input type="hidden" name="spellcheck" value="true">
+						<p>
+							<label class="hide-accessible" for="lib-search-box">Find articles, books, &amp; more</label>
+							<input type="text" id="lib-search-box" name="s.q" placeholder="Find articles, books, &amp; more" size="35">
+							<input type="submit" value="Find It!">
+						</p>
+					</form>
+				</div><!-- End #library-search -->
+					
+			<div class="cms-navigation" id="cms-navigation">
+				<ul>
+					<li><a href="http://gvsu.edu/library/find">Find Materials</a></li>
+					<li><a href="http://gvsu.edu/library/allservices">Services</a></li>
+					<li><a href="http://gvsu.edu/library/about">About Us</a></li>
+					<li><a href="http://help.library.gvsu.edu">Help</a></li>
+				</ul>
+			</div><!-- End #cms-navigation -->
+
+			<div class="cms-clear"></div>
 		
-				<div class="gvsu-clear"></div>
-			</div><!-- End #gvsu-header-wrapper -->
+			</div> <!-- End #cms-header-inner -->
+		</div><!-- End #cms-header -->
+	</div><!-- End #cms-header-wrapper -->
 
-			<div class="gvsu-clear"></div>
+	<div id="cms-body-wrapper">
+		<div id="cms-body">
+			<div id="cms-body-inner">
+				<div id="cms-body-table">
+					<div id="cms-content">
 
-			<div id="gvsu-library_title"><a href="http://gvsu.edu/library" title="Grand Valley State University Libraries">University Libraries</a></div>
-				
-			<div id="gvsu-library_menu"><!-- Anchor link to mobile menu -->
-				<a href="#navigation-menu">Menu</a>
-			</div><!-- End #gvsu-library_menu -->
+				<!--div class="alert" style="margin-top: 1.5em;width: 40em;">Items ordered now will not arrive until after the holiday recess, January 3, 2012.</div-->
 
-			<div id="gvsu-library_search">
-				<div id="summon-search" class="lib-form">
-					<form action="http://gvsu.summon.serialssolutions.com/search/results" method="get" id="summon-search-box" class="lib-simple-form">
-						<div>
-							<label style="display: none; ">Find articles, books, &amp; more</label>
-							<input id="search-text" type="text" name="q" placeholder="Find articles, books, &amp; more" />
-							<input type="hidden" name="spellcheck" value="true" />
-							<input type="submit" value="Find It!" class="lib-button-small" />
-						</div>
-					</form> 
-				</div><!-- End #summon-search -->
-			
-				<div>
-					<a title="Get Help Now" href="http://gvsu.edu/chat" class="libgethelp">Get Help Now</a>
-				</div>
-			</div><!-- End #gvsu-library_search -->
-	
-			<div id="page-content">
-
-				<!--div class="lib-alert" style="margin-top: 1.5em;width: 40em;">Items ordered after December 20th will not be ordered until after the holiday recess, January 3, 2014.</div-->
-
-				<div class="line">
-					<div class="span2of3 unit">
+				<div class="row">
+					<div class="span2 unit" style="float: right;">
 
 						<form action="illiad.dll" method="post" name="Logon" class="f-wrap-1 lib-form" autocorrect="off" autocapitalize="off">
 							
@@ -153,217 +83,94 @@
 							<div id="logonform">
 
 								<label for="username"><abbr title="Grand Valley State University">GVSU</abbr> Username</label>
-								<input id="username" name="Username" type="text" tabindex="1" /><br />
+								<input id="username" name="Username" type="text" tabindex="1" />
 
 								<label for="password"><abbr title="Grand Valley State University">GVSU</abbr> Password</label>
-								<input id="password" name="Password" type="password" tabindex="2" />
+								<input id="password" name="Password" type="password" tabindex="2" /><br />
 
-								<div class="f-submit-wrap">
-									<input name="SubmitButton" class="lib-button" style="margin-top:.5em;padding: .3em 1em;" tabindex="3" type="submit" value="Log In" /><br />
-								</div><!-- End .f-submit-wrap -->
+								<input name="SubmitButton" tabindex="3" type="submit" value="Log In" />
+								
 
 							</div><!-- End #logonform -->
 						</form>
 
-					</div><!-- End .span2of3.unit -->
-
-					<div class="span3 unit lastUnit">
-						&nbsp;
-					</div><!-- End .span3.unit.lastUnit -->
-				</div><!-- End .line -->
-				
-				<div class="gvsu-clear"></div>
-
-			</div><!-- End #page-content -->
-
-			<div id="navigation">
-					
-	<ul id="navigation-menu">
-						<li><a href="http://gvsu.edu/library">Library Home</a></li>
-						<li><a href="http://gvsu.edu/library/find" class="navparent" target="_self">Find</a>
-							<ul>
-								<li><a href="http://gvsu.edu/library/databases.htm" class="" target="_self">Databases</a></li>
-								<li><a href="http://gvsu.edu/library/findarticles" class="" target="_self">Articles</a></li>
-								<li><a href="http://gvsu.edu/library/findbooks" class="" target="_self">Books</a></li>
-								<li><a href="http://libguides.gvsu.edu" class="" target="_self">Subject &amp; Course Guides</a></li>
-								<li><a href="http://gvsu.edu/library/findjournals" class="" target="_self">Magazines &amp; Journals</a></li>
-								<li><a href="http://gvsu.edu/library/govdoc" class="" target="_self">Government Resources</a></li>
-								<li><a href="http://gvsu.edu/library/digitalcollections" class="" target="_self">Digital Collections</a></li>
-								<li><a href="http://gvsu.edu/library/specialcollections" class="" target="_self">Special Collections &amp; University Archives</a></li>
-								<li><a href="http://gvsu.edu/s/jn" class="" target="_self">ScholarWorks@GVSU Institutional Repository</a></li>
-								<li><a href="http://gvsu.edu/library/cml" class="" target="_self">Curriculum Materials</a></li>
-							</ul>
-						</li>
-						<li><a href="http://gvsu.edu/library/allservices" class="navparent" target="_self">Services</a>
-							<ul>
-								<li><a href="http://gvsu.edu/library/studentsupport" class="navparent">Student Support</a>
-									<ul>
-										<li><a href="http://gvsu.edu/library/student-support-220.htm#articles">Get Articles</a></li>
-										<li><a href="http://gvsu.edu/library/student-support-220.htm#books">Get Books</a></li>
-										<li><a href="http://gvsu.edu/library/student-support-220.htm#research">Get Research Help</a></li>
-										<li><a href="http://gvsu.edu/library/citationtools">Citation Tools</a></li>
-										<li><a href="http://gvsu.edu/library/student-support-220.htm#technology">Technology in the Library</a></li>
-										<li><a href="http://gvsu.edu/library/distancelearning">Distance Learning</a></li>
-										<li><a href="http://gvsu.edu/library/libraryquest">Library Quest</a></li>
-									</ul>
-								</li>
-								<li><a href="http://gvsu.edu/library/groupstudy">Reserve a Study Room</a></li>
-								<li><a href="http://gvsu.edu/library/ereserves" class="" target="_self">Course Reserves</a></li>
-								<li><a href="http://gvsu.edu/library/ill" class="" target="_self">Document Delivery</a></li>
-								<li><a href="http://gvsu.edu/library/instruction" class="" target="_self">Instructional Services</a></li>
-								<li><a href="http://gvsu.edu/library/sc/" class="navparent" target="_self">Scholarly Communications</a>
-									<ul>
-										<li><a href="http://gvsu.edu/s/jm" class="" target="_self">ScholarWorks@GVSU Institutional Repository</a></li>
-									</ul>
-								</li>
-								<li><a href="http://gvsu.edu/library/mastersprojects" class="" target="_self">Master's Projects</a></li>
-								<li><a href="http://gvsu.edu/library/labs" class="navparent" target="_self">Library Labs</a>
-									<ul>
-										<li><a href="http://gvsu.edu/library/status">Library Systems' Status</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="http://gvsu.edu/library/about" class="navparent" target="_self">About</a>
-							<ul>
-								<!--li><a href="http://gvsu.edu/chat" class="" target="_self">Contact Us</a></li-->
-								<li><a href="#" class="navparent">People</a>
-									<ul>
-										<li><a href="http://gvsu.edu/library/librarians" class="" target="_self">Subject Librarians </a></li>
-										<li><a href="http://gvsu.edu/library/staff" class="" target="_self">Staff</a></li>
-										<li><a href="http://gvsu.edu/library/lsac" class="" target="_self">Student Advisory Council</a></li>
-										<li><a href="http://gvsu.edu/library/jobs" class="" target="_self">Jobs</a></li>
-									</ul>
-								</li>
-								<li><a href="#" class="navparent">Visiting</a>
-									<ul>
-										<li><a href="http://gvsu.edu/library/hours.htm" class="" target="_self">Hours</a></li>
-										<li><a href="http://gvsu.edu/library/tours" class="" target="_self">Tours</a></li>
-										<li><a href="http://gvsu.edu/library/maryidemapew" class="" target="_self">Mary Idema Pew Library</a></li>
-										<li><a href="http://gvsu.edu/library/steelcase" class="" target="_self">Steelcase Library</a></li>
-										<li><a href="http://gvsu.edu/library/freychs" class="" target="_self">Frey Foundation Learning Center</a></li>
-										<li><a href="http://gvsu.edu/library/seidmanhouse" class="" target="_self">Seidman House</a></li>
-										<li><a href="http://gvsu.edu/library/cml" class="" target="_self">Curriculum Materials Library</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-					</ul>
-
-				<div class="clear"></div>
-					
-				<div id="navigation-contact">
-		
-					<p><b>University Libraries</b><br />
-					<a href="mailto:library@gvsu.edu">library@gvsu.edu</a><br />
-					Phone: 616-331-3500<br></p>
-				
-				</div><!-- End #navigation-contact -->
-
-					<div id="navigation-contact-socialMedia">
-					
-						<p><a href="http://twitter.com/gvsulib"><img src="/illiad/img/twitter.png" alt="Twitter" title="Twitter" width="32" height="32"></a>
-			
-						<a href="http://youtube.com/user/gvsulib"><img src="/illiad/img/youtube.png" alt="YouTube" title="YouTube" width="32" height="32"></a></p>
-					
-					</div><!-- End #navigation-contact-socialMedia -->
-
-					<div id="navigation-footer">
-
-						<style type="text/css">
-.chat { display: inline-block; padding-left: 1.45em; }
-.chat-online { background-image: url(/illiad/img/chat-online.png); background-repeat:no-repeat;background-position:middle left;  }
-.chat-offline { background-image: url(/illiad/img/chat-offline.png); background-repeat:no-repeat;background-position:middle left; color: #575757 !important;}</style>
-<div class="needs-js">
-	&nbsp;</div>
-<div class="libraryh3lp" jid="gvsulibs-queue@chat.libraryh3lp.com" style="display: none;">
-	<a class="lib-button-small-grey" href="#" onclick="window.open('https://libraryh3lp.com/chat/gvsulibs-queue@chat.libraryh3lp.com?skin=16489',
-   'chat', 'resizable=1,width=320,height=200'); return false;"><span class="chat chat-online">Chat now </span> </a></div>
-<div class="libraryh3lp" style="display: none;">
-	<a class="lib-button-small-grey" href="http://gvsu.edu/chat"><span class="chat chat-offline">Chat is Offline</span></a></div>
-<hr />
-					
+					</div><!-- End .span2 -->
+					<div class="span1" style="float: right;margin-top:2.5em;">
 						<p><b>Document Delivery</b><br />
 						<a href="mailto:docdel@gvsu.edu">docdel@gvsu.edu</a><br />
-						Phone: 616-331-2630<br /></p>
-						<p><a href="http://gvsu.edu/library/docdelpolicies" title="Document Delivery policies">Document Delivery Policies</a></p>
+						Phone: (616) 331-2630</p>
+
+						<p><a href="http://gvsu.edu/library/docdelpolicies">Document Delivery policies</a></p>
 						
-					
-						<!-- Temporary Libstats link fix -->
+					</div>
 
-						<style type="text/css">
-							#libstats-link { margin-top: 5em; }
-							#libstats-link a { display: inline-block; background: #fff; color: #fff; text-decoration: none; padding: .5em 1em; -webkit-border-radius: 6px; -moz-border-radius: 6px; -o-border-radius: 6px; border-radius: 6px; font-size: 1em; } 
-							#libstats-link a:hover { background: #069; }
-							#libstats-link a:hover { -webkit-box-shadow: 0px 3px 2px rgba(172, 167, 174, 0.75);
-							-moz-box-shadow: 0px 3px 2px rgba(172, 167, 174, 0.75);
-							box-shadow: 0px 3px 2px rgba(172, 167, 174, 0.75); }
-						</style>
-
-						<div id="libstats-link">
-							<a href="http://gvsulib.com/libstats">Libstats</a>
-						</div>
-		
-						<p><a href="javascript:var%20KICKASSVERSION='2.0';var%20s%20=%20document.createElement('script');s.type='text/javascript';document.body.appendChild(s);s.src='//hi.kickassapp.com/kickass.js';void(0);">_</a></p>
-
-					</div><!-- End #navigation-footer -->
-
-				</div><!-- End #navigation -->
+				</div><!-- End .line -->
 				
-			<div id="gvsu-footer-wrapper">
-				<div class="gvsu-clear"></div>
-			
-				<div id="gvsu-footer">
-					<div id="gvsu-contact_info" style="padding: 3.33em 0 3.33em 2.5em;">
-						<div class="vcard">
-							<span class="fn org" style="display:none">Grand Valley State University</span>
-							<p class="adr gvsu-address">
-								<span class="street-address">1 Campus Drive</span><br>
-								<span class="locality">Allendale</span>, <span class="region" title="Michigan">MI</span> <span class="postal-code">49401-9403</span><br>
-								<span class="country-name">USA</span> - <a href="tel:616-331-5000" class="tel" title="+1-616-331-5000">(616) 331-5000</a>
-							</p>
-						</div>
-						<p class="gvsu-footer_mobile_links"><br>
-						<a href="http://gvsu.edu/bus">Bus Schedule</a><br>
-						<a href="http://gvsu.edu/maps.htm">Campus Maps &amp; Directions</a><br>
-						<a href="http://gvsu.edu/aboutgvsu.htm">Quick Facts</a></p>
-					</div><!-- End #gvsu-contact_info -->
-			
-					<div id="gvsu-footer_links">
-						<p>
-							<a href="http://gvsu.edu/admissions">Apply Now</a><br>
-							<a href="http://www.gvsulakers.com">Athletics</a><br>
-							<a href="http://gvsu.edu/giving">Giving</a><br>
-							<a href="http://gvsu.edu/diversity">Inclusion/Diversity</a><br>
-							<a href="http://gvsu.edu/library">Library</a><br>
-							<a href="http://gvsu.edu/admissions/visit-schedule.htm">Schedule a Campus Visit</a><br>
-						</p>
-					</div><!-- ENd #gvsu-footer_links -->
-			
-					<div class="gvsu-clear"></div>
-				</div>
-		
-				<div id="gvsu-footer_secondary">
-			
-					<div id="gvsu-disclaimers_copyright">
-						<span class="gvsu-disclaimer gvsu-disclaimer_first"><a href="http://gvsu.edu/affirmativeactionstatement.htm"><span class="gvsu-disclaimer_mobile">GVSU is an </span>EO/AA institution</a></span>
-						<span class="gvsu-disclaimer"><a href="http://gvsu.edu/privacystatement.htm">Privacy Policy</a></span>
-						<span class="gvsu-disclaimer gvsu-disclaimer-disclosure"><a href="http://gvsu.edu/disclosures">Disclosure Information</a></span>
-						<span class="gvsu-disclaimer"><span class="gvsu-disclaimer_mobile">Copyright </span>&copy; 1995-2012<span class="gvsu-disclaimer_tablet"> GVSU</span></span>
-					</div><!-- End #gvsu-disclaimers_copyright -->
-				</div><!-- End #gvsu-footer_secondary -->
-	
-			</div><!-- End #footer -->
-		</div><!-- End #footer-wrapper -->
-					</div><!-- End #content -->
+				<div class="cms-clear"></div>
 
-	</div><!-- End #wrapper -->
-	<!-- Place this script as near to the end of your BODY as possible. --><script 
- type="text/javascript"> 
-  (function() {
-    var x = document.createElement("script"); x.type = "text/javascript"; x.async = true;
-    x.src = (document.location.protocol === "https:" ? "https://" : "http://") + "libraryh3lp.com/js/libraryh3lp.js?multi,poll";
-    var y = document.getElementsByTagName("script")[0]; y.parentNode.insertBefore(x, y);
-  })();
-</script>
+			</div><!-- End #cms-content -->
+				</div><!-- End #cms-body-table -->
+			</div><!-- End #cms-body-inner -->
+		</div><!-- end #cms-body -->
+	</div><!-- end #cms-body-wrapper -->
+
+	<div id="cms-footer-wrapper">
+		<div id="cms-footer">
+			<div id="cms-footer-inner">
+				<ul>
+					<li><h4>Contact</h4>
+						<p class="vcard">
+							<span class="tel"> 
+								<span class="type">Phone</span>:
+								<span class="value">(616) 331-3500</span>
+							</span>
+							<br />
+							<a href="mailto:library@gvsu.edu" class="email" target="_blank">library@gvsu.edu</a>
+							<br />
+						</p>
+					</li>
+					<li><h4>Social Media</h4>
+						<p>
+							<a href="http://twitter.com/gvsulib" title="http://twitter.com/gvsulib" class="socialmedia-icon socialmedia-icon-twitter">
+								<span class="cms-screen-reader">http://twitter.com/gvsulib</span>
+							</a>
+							<a href="http://youtube.com/user/gvsulib" title="http://youtube.com/user/gvsulib" class="socialmedia-icon socialmedia-icon-youtube">
+								<span class="cms-screen-reader">http://youtube.com/user/gvsulib</span>
+							</a>
+						</p>
+					</li>
+					<li id="library-fdlp">
+								<p>
+									<a href="http://gvsu.edu/library/govdoc" target="_blank">
+										<img src="//gvsu.edu/cms4/asset/0862059E-9024-5893-1B5AAAC2F83BDDD8/fdlp-new.png" alt="Federal Depository Library Program Logo">
+									</a>
+									<br>
+									Federal Depository<br>
+									Library Program
+								</p>
+							</li>
+				</ul>
+			</div><!-- End #cms-footer-inner -->
+		</div><!-- End #cms-footer -->
+	</div><!-- End #cms-footer-wrapper -->
+
+	<div id="cms-copyright-wrapper">
+		<div id="cms-copyright">
+			<div id="cms-copyright-inner">
+				<ul>
+					<li><a href="http://gvsu.edu/affirmativeactionstatement.htm">GVSU is an EO/AA Institutio</a></li>
+					<li><a href="http://gvsu.edu/privacystatement.htm">Privacy Policy</a></li>
+					<li><a href="http://gvsu.edu/disclosures">Disclosures</a></li>
+					<li>Copyright © 1995-2015 GVSU</li>
+				</ul>
+			</div><!-- End #cms-copyright-inner -->
+		</div><!-- End #cms-copyright -->
+	</div><!-- End #cms-copyright-wrapper -->
+
+	<!-- Special div custom to Illiad -->
+	<div id="renewalHack" style="display: none;"></div>
+
+	<script src="js/chatbutton.js"></script>
+	<script src="//gvsu.edu/cms4/skeleton/0/files/js/cms4.0.min.js"></script>
+	<script>cmsInit()</script>
 </body></html>

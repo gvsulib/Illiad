@@ -12,7 +12,7 @@
 
 <p style="font-size: 1.2em; margin-top: -2em;"><strong>We cannot order textbooks through Document Delivery.</strong></p>
 
-<div class="row">
+<div class="row row-gutter">
 <div class="span3">
 <!-- Book author input -->
 <label for="LoanAuthor"><span class="req">*</span> <span class="<#ERROR name="ERRORLoanAuthor">">Author(s) / Editor(s)</span></label>
@@ -20,7 +20,7 @@
 </div>
 </div>
 
-<div class="row">
+<div class="row row-gutter">
 <div class="span3">
 <!-- Book title input -->
 <label for="LoanTitle"><span class="req">*</span> <span class="<#ERROR name="ERRORLoanTitle">">Title</span></label>
@@ -29,52 +29,52 @@
 </div>
 </div>
 
-<div class="row">
+<div class="row row-gutter">
 <!-- Book publisher input -->
-<div class="span1">
+<div class="col-4 col-sm-12">
 <label for="LoanPublisher"><span class="<#ERROR name="ERRORLoanPublisher">">Publisher</span></label>
 <input id="LoanPublisher" name="LoanPublisher" tabindex="3" type="text" value="<#PARAM name="LoanPublisher">" />
 </div>
 
 <!-- Book publication place input -->
-<div class="span1">
+<div class="col-4 col-sm-12">
 <label for="LoanPlace"><span class="<#ERROR name="ERRORLoanPlace">">Place of Publication</span></label>
 <input id="LoanPlace" name="LoanPlace" tabindex="4" type="text" value="<#PARAM name="LoanPlace">" />
 </div>
 <!-- Book publication date input -->
-<div class="span1">
+<div class="col-4 col-sm-12">
 <label for="LoanDate"><span class="<#ERROR name="ERRORLoanDate">">Date of Publication</span></label>
 <input id="LoanDate" name="LoanDate" tabindex="5" type="text" value="<#PARAM name="LoanDate">" />
 </div>
 </div>
 
-<div class="row">
-<div class="span1">
+<div class="row row-gutter">
+<div class="col-4 col-sm-12">
 <label for="ISSN"><span class="<#ERROR name="ERRORISSN">"><abbr title="International Standard Book Number">ISBN</abbr> (Helps us get it faster)</span></label>
 <input id="ISSN" name="ISSN" tabindex="7" type="text" value="<#PARAM name="ISSN">" />
 </div>
 
 <!-- OCLC or Docline UI Number -->
-<div class="span1">
+<div class="col-4 col-sm-12">
 <label for="ESPNumber"><span class="<#ERROR name="ERRORESPNumber">"><abbr title="Online Computer Library center">OCLC</abbr> or Docline <abbr title="Unique Identifier">UI</a> Number</span></label>
 <input id="ESPNumber" name="ESPNumber" tabindex="8" type="text" value="<#PARAM name="ESPNumber">">
 </div>
 
 <!-- Call number input -->
-<div class="span1">
+<div class="col-4 col-sm-12">
 <label for="CallNumber"><span class="<#ERROR name="ERRORCallNumber">">Call Number</span></label>
 <input id="CallNumber" name="CallNumber" tabindex="9" type="text" value="<#PARAM name="CallNumber">" />
 </div>
 </div>
 
-<div class="row">
+<div class="row row-gutter">
 <!-- Book publication edition input -->
-<div class="span2">
+<div class="col-8 col-sm-12">
 <label for="LoanEdition"><span class="<#ERROR name="ERRORLoanEdition">">Edition</span></label>
 <input id="LoanEdition" name="LoanEdition" tabindex="6" type="text" value="<#PARAM name="LoanEdition">" />
 </div>
 <!-- Alternate edition input -->
-<div class="span1">
+<div class="col-4 col-sm-12">
 <label for="AcceptAlternateEdition"><span class="<#ERROR name="ERRORAcceptAlternateEdition">">Alternate edition okay?</span></label>
 <p style="margin:0;padding:0;">Specify specific edition above.</p>
 <select id="AcceptAlternateEdition" name="AcceptAlternateEdition" tabindex="11">
@@ -92,15 +92,15 @@
 </div>
 </div>
 
-<div class="row">
+<div class="row row-gutter">
 <!-- Not wanted after date -->
-<div class="span2">
+<div class="col-8 col-sm-12">
 <label for="NotWantedAfter"><span class="req">*</span> <span class="<#ERROR name="ERRORNotWantedAfter">">Not Wanted After Date</span></label>
 <p style="margin:0;padding:0;">(MM/DD/YYYY)</p>
 <input id="NotWantedAfter" name="NotWantedAfter" tabindex="13" type="text" value="<#PARAM name="NotWantedAfter">" />
 </div>
 <!-- Non-English input -->
-<div class="span2">
+<div class="col-8 col-sm-12">
 <label for="AcceptNonEnglish"><span class="<#ERROR name="ERRORAcceptNonEnglish">">Language other than English okay?</span></label>
 <p style="margin:0;padding:0;">Specify acceptable languages in the notes field.</p>
 <select id="AcceptNonEnglish" name="AcceptNonEnglish" tabindex="12">
@@ -120,7 +120,7 @@
 </div>
 
 
-<div class="row">
+<div class="row row-gutter">
 <div class="span3">
 <!-- Notes input -->
 <label for="Notes"><span class="<#ERROR name="ERRORNotes">">Notes</span></label>

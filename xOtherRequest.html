@@ -1,0 +1,67 @@
+  <#INCLUDE filename="include_header_request.html">
+  <div id="content-wrap">
+  	<#INCLUDE filename="include_menu.html">
+    <div id="content">
+		<form action="illiad.dll" method="post" name="OtherRequest" class="f-wrap-request">
+			<input type="hidden" name="ILLiadForm" value="OtherRequest">
+			<input type="hidden" name="RequestType" value="Loan">
+			<input type="hidden" name="Username" value="<#PARAM name="Username">">
+			<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
+				<div class="req"><b>*</b> Indicates required field</div>
+				<fieldset>			
+					<h3>Other Request</h3>
+					<#STATUS>
+					<h2>Describe the item you want</h2>
+
+					<label for="Other">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERROROther">"><b>Citation</b></span><br />
+							<span class="note">Please paste any citation information you have here.</span>
+						</span>
+						<textarea id="Other" name="Other" rows="10" cols="60" class="f-name" tabindex="1"><#PARAM name="Other"></textarea><br />
+					</label>			
+							
+					<label for="NotWantedAfter">
+						<span class="field">
+							<span class="req">*</span>
+							<span class="<#ERROR name="ERRORNotWantedAfter">"><b>Not Wanted After Date</b></span><br />
+							<span class="note">(MM/DD/YYYY)</span>
+						</span>
+						<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name" tabindex="2" value="<#PARAM name="NotWantedAfter">"><br />						
+					</label>
+					
+					<label for="AcceptNonEnglish">
+						<span class="field">
+							<span class="<#ERROR name="ERRORAcceptNonEnglish">"><b>Will you accept the item in a language other than English?</b></span><br />
+							<span class="note">If yes, specify acceptable languages in the notes field.</span>
+						</span>
+						<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name" tabindex="3">
+							<option selected><#PARAM name="AcceptNonEnglish"></option>
+							<option>No</option>
+							<option>Yes</option>
+						</select><br />
+					</label>
+										
+					<!--<label for="ValidAccountsDropDown">
+						<span class="field">
+							<span class="<#ERROR name="ERRORValidAccountsDropDown">"><b>Account Number</b></span>
+						</span>
+						<select id="ValidAccountsDropDown" name="ValidAccountsDropDown" size="1" class="f-name" tabindex="4">
+							<#OPTION name="ValidAccounts">
+						</select><br />
+					</label>-->
+					
+					<label for="Notes">
+						<span class="field">
+							<span class="<#ERROR name="ERRORNotes">"><b>Notes</b></span><br />
+							<span class="note">Put any information here that may help us find the item, as well as any other pertinent information.</span>
+						</span>
+						<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" tabindex="5"><#PARAM name="Notes"></textarea><br />
+					</label>
+					
+					<#INCLUDE filename="include_request_cited.html">                
+                    <#INCLUDE filename="include_request_buttons.html">
+				</fieldset>
+		</form>
+		<#INCLUDE filename="include_footer.html">

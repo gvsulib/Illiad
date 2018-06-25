@@ -1,0 +1,142 @@
+<#INCLUDE filename="include_header.html">
+<#INCLUDE filename="include_menu.html">
+
+<style>
+form.lib-login textarea {
+width: 91%;
+height: 5em;
+border: 1px solid #ddd;
+}
+
+form.lib-login input {
+font-size: 1.2em !important;
+}
+.illiad-two-column {
+width: 48%;
+float: left;
+}
+
+.illiad-four-column {
+width: 23%;
+float: left;
+}
+</style>
+
+<form action="illiad.dll" method="post" name="ArticleRequest" class="f-wrap-request lib-login">
+	
+<input type="hidden" name="ILLiadForm" value="ArticleRequest">
+<input type="hidden" name="Username" value="<#PARAM name="Username">">
+<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
+		
+<h4>Digital Copy Request</h4>
+<#STATUS>
+
+<!-- Article Author input -->
+<label for="PhotoArticleAuthor"><span class="<#ERROR name="ERRORPhotoArticleAuthor">">Article Author</span></label>
+<input class="f-name" id="PhotoArticleAuthor" name="PhotoArticleAuthor" tabindex="10" type="text" value="<#PARAM name="PhotoArticleAuthor">">						
+
+<!-- Article Title input -->
+<label for="PhotoArticleTitle"><span class="req">*</span> <span class="<#ERROR name="ERRORPhotoArticleTitle">">Article or Book Chapter Title</span></label>
+<textarea id="PhotoArticleTitle" name="PhotoArticleTitle" tabindex="11"><#PARAM name="PhotoArticleTitle"></textarea>
+
+<!-- Journal Title input -->					
+<label for="PhotoJournalTitle"><span class="req">*</span> <span class="<#ERROR name="ERRORPhotoJournalTitle">">Journal Title (Please do not abbreviate)</span></label>
+<textarea id="PhotoJournalTitle" name="PhotoJournalTitle" tabindex="1"><#PARAM name="PhotoJournalTitle"></textarea>
+
+<!-- Journal details row -->
+
+<!-- Volume input -->
+<div class="illiad-four-column">
+<label for="PhotoJournalVolume"><span class="req">*</span> <span class="<#ERROR name="ERRORPhotoJournalVolume">">Volume</span></label>
+<input id="PhotoJournalVolume" name="PhotoJournalVolume" tabindex="2" type="text" value="<#PARAM name="PhotoJournalVolume">">						
+</div>
+
+<!-- Issue input -->
+<div class="illiad-four-column">
+<label for="PhotoJournalIssue"><span class="req">*</span> <span class="<#ERROR name="ERRORPhotoJournalIssue">">Issue Number</span></label>
+<input id="PhotoJournalIssue" name="PhotoJournalIssue" tabindex="3" type="text" value="<#PARAM name="PhotoJournalIssue">">
+</div>
+
+<!-- Month input -->
+<div class="illiad-four-column">						
+<label for="PhotoJournalMonth"><span class="<#ERROR name="ERRORPhotoJournalMonth">">Month</span></label>
+<input id="PhotoJournalMonth" name="PhotoJournalMonth" tabindex="4" type="text" value="<#PARAM name="PhotoJournalMonth">">
+</div>
+
+<!-- Year input -->					
+<div class="illiad-four-column">
+<label for="PhotoJournalYear"><span class="req">*</span> <span class="<#ERROR name="ERRORPhotoJournalYear">">Year</span></label>
+<input id="PhotoJournalYear" name="PhotoJournalYear" tabindex="5" type="text" value="<#PARAM name="PhotoJournalYear">">
+</div>
+
+<div class="clear"></div>
+
+<!-- Pages input -->					
+<div class="illiad-two-column">
+<label for="PhotoJournalInclusivePages"><span class="req">*</span> <span class="<#ERROR name="ERRORPhotoJournalInclusivePages">">Pages</span></label>
+<input id="PhotoJournalInclusivePages" name="PhotoJournalInclusivePages" tabindex="6" type="text" value="<#PARAM name="PhotoJournalInclusivePages">">
+</div>
+
+<!-- ISSN input -->
+<div class="illiad-two-column">					
+<label for="ISSN"><span class="<#ERROR name="ERRORISSN">"><abbr title="International Standard Serial Number">ISSN</abbr> or <abbr title="International Standard Book Number">ISBN</abbr></span> (Helps us get it faster)</label>
+<input id="ISSN" name="ISSN" tabindex="7" type="text" value="<#PARAM name="ISSN">">
+</div>
+						
+<div class="clear"></div>
+
+<!-- OCLC Number label -->
+<div class="illiad-two-column">
+<label for="ESPNumber"><span class="<#ERROR name="ERRORESPNumber">"><abbr title="Online Computer Library Center">OCLC</abbr> or <abbr title="PubMed Identification">PMID</a> Number</span></label>
+<input id="ESPNumber" name="ESPNumber" tabindex="9" type="text" value="<#PARAM name="ESPNumber">">
+</div>
+
+<!-- Call Number label -->
+<div class="illiad-two-column">
+<label for="CallNumber"><span class="<#ERROR name="ERRORCallNumber">">Call Number</span></label>
+<input id="CallNumber" name="CallNumber" tabindex="8" type="text"value="<#PARAM name="CallNumber">">
+</div>
+						
+<div class="clear"></div>			
+<hr />
+
+<!-- Notes input -->					
+<label for="Notes"><span class="<#ERROR name="ERRORNotes">">Notes</span></label>
+<p style="margin: 0;padding:0;">Put any information here that may help us find the item.</p>
+<textarea id="Notes" name="Notes" tabindex="15"><#PARAM name="Notes"></textarea>
+
+<!-- Not Wanted After Input -->
+<div class="illiad-two-column">
+<label for="NotWantedAfter"><span class="req">*</span> <span class="<#ERROR name="ERRORNotWantedAfter">">Not Wanted After Date</span></label>
+<p style="margin:0;padding:0;">(MM/DD/YYYY)</p>
+<input id="NotWantedAfter" name="NotWantedAfter" tabindex="12" type="text" value="<#PARAM name="NotWantedAfter">">
+</div>
+
+<!-- Non-English input -->					
+<div class="illiad-two-column">
+<label for="AcceptNonEnglish"><span class="<#ERROR name="ERRORAcceptNonEnglish">">Language other than English okay?</span></label>
+<p style="margin:0;padding:0">Specify acceptable languages in the notes field.</p>
+
+<select id="AcceptNonEnglish" name="AcceptNonEnglish" tabindex="13">
+
+<optgroup label="Your Selection">
+<option selected><#PARAM name="AcceptNonEnglish"></option>
+</optgroup>
+
+<optgroup label="Change Your Selection">
+<option>No</option>
+<option>Yes</option>
+</optgroup>
+</select>
+
+</div>
+
+<div class="clear"></div>
+					
+<hr />
+<#INCLUDE filename="include_request_cited.html">                
+<#INCLUDE filename="include_request_buttons.html">
+
+</form>		
+
+<#INCLUDE filename="include_footer.html">

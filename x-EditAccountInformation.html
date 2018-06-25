@@ -1,0 +1,57 @@
+  <#INCLUDE filename="include_header.html">
+  <div id="content-wrap">
+  	<#INCLUDE filename="include_menu.html">
+    <div id="content">
+		<div class="default-table">
+			<#TABLE name="ShowCurrentAccounts" headerText="Current Accounts" noDataAction="ShowMessageRow" noDataMessage="No Accounts"><br />
+		</div>
+					
+		<form action="illiad.dll" method="post" name="EditAccountForm" class="f-wrap-request">
+			<input type="hidden" name="ILLiadForm" value="EditAccountForm">
+			<input type="hidden" name="Username" value="<#PARAM name="Username">">
+			<input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
+				<div class="req"><b>*</b> Indicates required field</div>
+				<fieldset>			
+					<h3>Add Account</h3>
+					
+					<label for="AccountNo">
+						<span class="field">
+							<span class="<#ERROR name="ERRORAccountNo">"><b>Account Number</b></span>
+						</span>
+						<input id="AccountNo" name="AccountNo" type="text" size="40" class="f-name" tabindex="1" value="<#PARAM name="AccountNo">"><br />
+					</label>		
+						
+					<label for="Type">
+						<span class="field">
+							<span class="<#ERROR name="ERRORType">"><b>Account Type</b></span>
+						</span>
+						<input id="Type" name="Type" type="text" size="40" class="f-name" tabindex="2" value="<#PARAM name="Type">"><br />
+					</label>
+					
+					<label for="Description">
+						<span class="field">
+							<span class="<#ERROR name="ERRORDescription">"><b>Description</b></span>
+						</span>
+						<input id="Description" name="Description" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="Description">"><br />
+					</label>
+					
+					<label for="CCExpirationDate">
+						<span class="field">
+							<span class="<#ERROR name="ERRORCCExpirationDate">"><b>Expiration Date</b></span>
+						</span>
+						<input id="CCExpirationDate" name="CCExpirationDate" type="text" size="40" class="f-name" tabindex="4" value="<#PARAM name="CCExpirationDate">"><br />
+					</label>
+					
+					<label for="CCNameonCard">
+						<span class="field">
+							<span class="<#ERROR name="ERRORCCNameonCard">"><b>Name on Card</b></span>
+						</span>
+						<input id="CCNameonCard" name="CCNameonCard" type="text" size="40" class="f-name" tabindex="5" value="<#PARAM name="CCNameonCard">"><br />
+					</label>
+					
+                    <div class="f-submit-wrap">
+						<input type="submit" name="SubmitButton" value="Add Account" class="f-submit" tabindex="6" />
+					</div>
+				</fieldset>
+		</form>		
+      	<#INCLUDE filename="include_footer.html">

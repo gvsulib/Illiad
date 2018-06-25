@@ -1,48 +1,39 @@
 <#INCLUDE filename="include_header.html">
 
-<h3>Sign in to Document Delivery</h3>
-
-<div class="gvsu-clear"></div>
-
-<div id="status"><#STATUS></div>
-<div id="main">
-
-	<!--div class="alert" style="margin-top: 1.5em;width: 40em;">Items ordered now will not arrive until after the holiday recess, January 3, 2012.</div-->
-
-				<div class="line">
-					<div class="span2of3 unit">
+<div class="row row-gutter">
+					<div class="col-8 col-sm-12" style="float: right;">
 
 						<form action="illiad.dll" method="post" name="Logon" class="f-wrap-1 lib-form" autocorrect="off" autocapitalize="off">
 							
 							<h3>Sign in to Document Delivery</h3>
 
-							<div>CGIFN=^VAROpenURLInfo1^</div>
-
-							<input type="hidden" name="IlliadForm" value="OpenURLLogon">
+							<input type="hidden" name="ILLiadForm" value="Logon" />
 							<div id="logonform">
 
 								<label for="username"><abbr title="Grand Valley State University">GVSU</abbr> Username</label>
-								<input id="username" name="Username" type="text" tabindex="1" /><br />
+								<input id="username" name="Username" type="text" tabindex="1" />
 
 								<label for="password"><abbr title="Grand Valley State University">GVSU</abbr> Password</label>
-								<input id="password" name="Password" type="password" tabindex="2" />
+								<input id="password" name="Password" type="password" tabindex="2" /><br />
 
-								<div class="f-submit-wrap">
-									<input name="SubmitButton" class="lib-button" style="margin-top:.5em;padding: .3em 1em;" tabindex="3" type="submit" value="Log In" /><br />
-								</div><!-- End .f-submit-wrap -->
+								<input name="SubmitButton" tabindex="3" type="submit" value="Log In" />
+								
 
 							</div><!-- End #logonform -->
 						</form>
 
-					</div><!-- End .span2of3.unit -->
+					</div><!-- End .span2 -->
+					<div class="col-4 col-sm-12" style="float: right;margin-top:2.5em;">
+						<p><b>Document Delivery</b><br />
+						<a href="mailto:docdel@gvsu.edu">docdel@gvsu.edu</a><br />
+						Phone: (616) 331-2630</p>
 
-					<div class="span3 unit lastUnit">
-						&nbsp;
-					</div><!-- End .span3.unit.lastUnit -->
+						<p><a href="https://www.gvsu.edu/library/docdelpolicies">Document Delivery policies</a></p>
+						
+					</div>
+
+
+
 				</div><!-- End .line -->
-				
-				<div class="gvsu-clear"></div>
-
-</div>
 
 <#INCLUDE filename="include_footer.html">

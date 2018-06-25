@@ -1,0 +1,201 @@
+<#INCLUDE filename="include_header.html">
+<#INCLUDE filename="include_menu.html">
+<body bgcolor="#FFFFFF">
+
+<form action="illiad.dll" method="POST">
+  <input type="hidden" name="ILLiadForm" value="ReportRequest"><input type="hidden"
+  name="Username" value="CGIFN=^VARUsername^">
+<input type="hidden" name="SessionID" value="CGIFN=^VARSessionID^">
+
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td align="left" width="720"><img usemap="#topnav" border="0" height="48" width="720" src="images/top720.gif"><map id="topnav">
+<area href="http://www.gvsu.edu/" coords="-2,-11,170,48" shape="rect">
+<area href="http://www.gvsu.edu/" coords="318,32,354,48" shape="rect">
+<area href="http://www.gvsu.edu/index.cfm?fuseaction=home.search" coords="361,32,402,48" shape="rect">
+<area href="http://www.gvsu.edu/library/" coords="411,32,454,48" shape="rect">
+<area href="http://www.gvsu.edu/direct/index.html" coords="461,32,539,48" shape="rect">
+<area href="http://www3.gvsu.edu/cgi-bin1/admin/mailtowebmaster.pl" coords="546,32,605,48" shape="rect">
+<area href="http://www.gvsu.edu/index.cfm?fuseaction=home.news" coords="617,32,650,48" shape="rect">
+<area href="http://www.gvsu.edu/index.cfm?fuseaction=home.sitemap" coords="658,32,716,48" shape="rect">
+</map>
+</td><td height="48" width="100%" background="images/spacerTopNav.jpg"></td>
+</tr>
+</table>
+
+<table border="0" width="100%">
+    <tr>
+      <td width="75%" bgcolor="#000080"><font color="#FFFFFF" size="5" face="Arial">Report 
+        Request for CGIFN=^VARUsername^</font></td>
+      <td align="center" width="25%" bgcolor="#000080"><font color="#FFFFFF">
+<input type="submit" name="SubmitButton"
+      value="Exit to Main Menu"></font></td>
+    </tr>
+  </table>
+  <table border="0" width="100%">
+    <tr>
+      <td valign="top" width="10%" bgcolor="#COCEFE"><font face="Arial"><strong>Status</strong></font></td>
+      <td width="90%" bgcolor="#COCEFE"><font face="Arial"><em>CGIFN=^StatusLine^</em></font></td>
+    </tr>
+  </table>
+  <table border="0" cellpadding="6" width="100%">
+    <tr>
+            <td align="center" colspan="3" bgcolor="#000000">
+              <p align="left"><font
+            color="#FFFFFF" face="Arial"><strong>Describe the
+            item you want</strong></font>&nbsp;</p>
+            </td>
+    </tr>
+    <tr>
+            <td align="center"><font size="1">CGIFN=^VARERRORLoanAuthor^</font></td>
+            <td>Author/Editors <font color="#FF0000"><em>(required)</em></font></td>
+            <td><input type="text" size="40" maxlength="100"
+            name="LoanAuthor" value="CGIFN=^VARLoanAuthor^"></td>
+    </tr>
+    <tr>
+            <td align="center" width="5%"><font size="1">CGIFN=^VARERRORLoanTitle^</font></td>
+            <td width="50%">Title <font color="#FF0000"><em>(Please
+            do not abbreviate unless your citation is
+            abbreviated) (required)</em></font></td>
+            <td width="45%"><textarea name="LoanTitle"
+            rows="2" cols="40">CGIFN=^VARLoanTitle^</textarea></td>
+    </tr>
+    <tr>
+            <td align="center">&nbsp;<font size="1">CGIFN=^VARERRORLoanPublisher^</font></td>
+            <td>Organization</td>
+            <td><input type="text" size="40" maxlength="30"
+            name="LoanPublisher" value="CGIFN=^VARLoanPublisher^"></td>
+    </tr>
+    <tr>
+            <td align="center">&nbsp;<font size="1">CGIFN=^VARERRORLoanPlace^</font></td>
+            <td>Place of Publication</td>
+            <td><input type="text" size="40" maxlength="30"
+            name="LoanPlace" value="CGIFN=^VARLoanPlace^"></td>
+    </tr>
+    <tr>
+            <td align="center">&nbsp;<font size="1">CGIFN=^VARERRORLoanDate^</font></td>
+            <td>Year</td>
+            <td><input type="text" size="40" maxlength="30"
+            name="LoanDate" value="CGIFN=^VARLoanDate^"></td>
+    </tr>
+    <tr>
+            <td align="center">&nbsp;<font size="1">CGIFN=^VARERRORLoanEdition^</font></td>
+            <td>Report Number</td>
+            <td><input type="text" size="40" maxlength="30"
+            name="LoanEdition" value="CGIFN=^VARLoanEdition^"></td>
+    </tr>
+<tr>
+            <td align="center">&nbsp;<font size="1">CGIFN=^VARERRORCallNumber^</font></td>
+            <td>Call Number</td>
+            <td><input type="text" size="20" name="CallNumber"
+            value="CGIFN=^VARCallNumber^"></td>
+        </tr>
+        <tr>
+            <td align="center">&nbsp;<font size="1">CGIFN=^VARERRORESPNumber^</font></td>
+            <td>OCLC or Docline UI Number</td>
+            <td><input type="text" size="20" name="ESPNumber"
+            value="CGIFN=^VARESPNumber^"></td>
+        </tr>
+    <tr>
+            <td align="center"><font size="1">CGIFN=^VARERRORNotWantedAfter^</font></td>
+            <td>Not Wanted After Date<font color="#FF0000"><em>
+            (format: MM/DD/YYYY) (required)</em></font></td>
+            <td><input type="text" size="40"
+            name="NotWantedAfter" value="CGIFN=^VARNotWantedAfter^"></td>
+    </tr>
+    <tr>
+            <td align="center">&nbsp;<font size="1">CGIFN=^VARERRORAcceptNonEnglish^</font></td>
+            <td>Will you accept the item in a language other than
+            English? If yes, specify acceptable languages in the
+            notes field.</td>
+            <td><select name="AcceptNonEnglish" size="1">
+                <option selected>CGIFN=^VARAcceptNonEnglish^</option>
+                <option>No</option>
+                <option>Yes</option>
+            </select></td>
+    </tr>
+<TR>
+    <TD align=middle><FONT size=1>CGIFN=^VARERRORValidAccountsDropDown^</FONT></TD>
+    <TD>Account Number</TD>
+    <TD>CGIFN=^VARValidAccountsDropDown^</TD></TR>
+    <tr>
+            <td align="center">&nbsp;<font size="1">CGIFN=^VARERRORAcceptAlternateEdition^</font></td>
+            <td>Will you accept an alternate edition of this
+            item?</td>
+            <td><select name="AcceptAlternateEdition" size="1">
+                <option selected>CGIFN=^VARAcceptAlternateEdition^</option>
+                <option>No</option>
+                <option>Yes</option>
+            </select></td>
+    </tr>
+    <tr>
+            <td align="center">&nbsp;<font size="1">CGIFN=^VARERRORNotes^</font></td>
+            
+      <td><strong>Notes</strong> (max 255 characters)<br>
+            Put any information here that may help us find the
+            item, as well as any other pertinent information.</td>
+            <td><textarea name="Notes"
+            rows="2" cols="40">CGIFN=^VARNotes^</textarea></td>
+    </tr>
+    <tr>
+            <td align="center" colspan="3" bgcolor="#000000">
+              <p align="left"><font
+            color="#FFFFFF" face="Arial"><strong>Where did you learn about this
+              item?</strong></font>&nbsp;</p>
+            </td>
+    </tr>
+    <tr>
+            <td align="center">&nbsp;<font size="1">CGIFN=^VARERRORCitedIn^</font></td>
+            <td>Where did you find this item cited?<br>
+            <font size="2">Examples are Dissertation Abstracts,
+            Dialog (specify which database), or a specific
+            journal or book.</font></td>
+            <td><input type="text" size="40" maxlength="40"
+            name="CitedIn" value="CGIFN=^VARCitedIn^"></td>
+    </tr>
+    <tr>
+            <td align="center">&nbsp;<font size="1">CGIFN=^VARERRORCitedDate^</font></td>
+            <td>Date of the work that cited the item.</td>
+            <td><input type="text" size="40" maxlength="40"
+            name="CitedDate" value="CGIFN=^VARCitedDate^"></td>
+    </tr>
+    <tr>
+            <td align="center">&nbsp;<font size="1">CGIFN=^VARERRORCitedVolume^</font></td>
+            <td>Volume of the work that cited the item.</td>
+            <td><input type="text" size="40" maxlength="40"
+            name="CitedVolume" value="CGIFN=^VARCitedVolume^"></td>
+    </tr>
+    <tr>
+            <td align="center">&nbsp;<font size="1">CGIFN=^VARERRORCitedPages^</font></td>
+            <td>Pages where the item is cited.</td>
+            <td><input type="text" size="40" maxlength="40"
+            name="CitedPages" value="CGIFN=^VARCitedPages^"></td>
+    </tr>
+  </table>
+  <hr>
+  <table border="0" cellpadding="6" width="100%">
+    <tr>
+      <td width="5%"></td>
+      <td align="right" width="50%"><font color="#000000" size="2" face="Arial"><strong>Press 
+        this button to submit your request for processing by Document Delivery 
+        staff.</strong></font></td>
+      <td align="left" width="45%"><br>
+      <input type="submit" name="SubmitButton" value="Submit Request"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td align="right"><font color="#000000" size="2" face="Arial"><strong>Press this button to clear all
+      entries on this form and start over.</strong></font></td>
+      <td align="left"><br>
+      <input type="reset" name="SubmitButton2" value="Clear Form"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td align="right"><font size="2" face="Arial"><strong>This button will cancel your request and return
+      you to the main menu. All information entered into this page will be discarded.</strong></font></td>
+      <td align="left"><br>
+      <input type="submit" name="SubmitButton" value="Cancel - Return to Main Menu"></td>
+    </tr>
+  </table>
+</form>
+<#INCLUDE filename="include_footer.html">

@@ -1,0 +1,122 @@
+    <#INCLUDE filename="include_header_request.html">
+    <div id="content-wrap">
+		<#INCLUDE filename="include_menu.html">
+        <div id="content">
+            <form action="illiad.dll" method="post" name="GenericRequestTesting" class="f-wrap-request">
+                <input type="hidden" name="ILLiadForm" value="GenericRequestTesting">
+                <input type="hidden" name="Username" value="<#PARAM name="Username">">
+                <input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
+				<input name="RequestType" type="hidden" id="RequestType" value="Loan">
+				<input name="DocumentType" type="hidden" id="DocumentType" value="Testing">
+                <div class="req"><b>*</b> Indicates required field</div>
+                <fieldset>
+                	<h3>Testing Request</h3>
+					<#STATUS>
+                	<h2>Describe the item you want</h2>
+                	<label for="LoanAuthor">
+                		<#ERROR name="ERRORLoanAuthor">
+                		<b><span class="req">*</span>Author/Editors</b>
+                		<input id="LoanAuthor" name="LoanAuthor" type="text" size="40" class="f-name" tabindex="1" value="<#PARAM name="LoanAuthor">"><br />
+                	</label>
+                	
+					<label for="LoanTitle">
+                		<#ERROR name="ERRORLoanTitle">
+                		<b><span class="req">*</span>Title<br />
+                		<span class="note">Please do not abbreviate</span></b>
+                		<textarea id="LoanTitle" name="LoanTitle" rows="2" cols="40" class="f-name" tabindex="2"><#PARAM name="LoanTitle"></textarea><br />
+                	</label>
+                	
+					<label for="LoanPublisher">
+                		<#ERROR name="ERRORLoanPublisher">
+                		<b>Publisher</b>
+                		<input id="LoanPublisher" name="LoanPublisher" type="text" size="40" class="f-name" tabindex="3" value="<#PARAM name="LoanPublisher">"><br />
+                	</label>
+					
+                	<label for="LoanPlace">
+                		<#ERROR name="ERRORLoanPlace">
+                		<b>Place of Publication</b>
+                		<input id="LoanPlace" name="LoanPlace" type="text" size="40" class="f-name" tabindex="4" value="<#PARAM name="LoanPlace">"><br />
+                	</label>
+					
+                	<label for="LoanDate">
+                		<#ERROR name="ERRORLoanDate">
+                		<b>Date of Publication</b>
+                		<input id="LoanDate" name="LoanDate" type="text" size="40" class="f-name" tabindex="5" value="<#PARAM name="LoanDate">"><br />
+                	</label>
+                
+					<label for="LoanEdition">
+                		<#ERROR name="ERRORLoanEdition">
+                		<b>Edition</b>
+                		<input id="LoanEdition" name="LoanEdition" type="text" size="40" class="f-name" tabindex="6" value="<#PARAM name="LoanEdition">"><br />
+                	</label>
+					
+                	<label for="ISSN">
+                		<#ERROR name="ERRORISSN">
+                		<b>ISBN (International Standard Book Number)<br />
+                		<span class="note">If given will speed request processing</span></b>
+                		<input id="ISSN" name="ISSN" type="text" size="20" class="f-name" tabindex="7" value="<#PARAM name="ISSN">"><br />
+                	</label>
+					
+                	<label for="CallNumber">					
+                		<#ERROR name="ERRORCallNumber">
+                		<b>Call Number</b>
+                		<input id="CallNumber" name="CallNumber" type="text" size="20" class="f-name" tabindex="8" value="<#PARAM name="CallNumber">"><br />
+                	</label>
+					
+                	<label for="ESPNumber">
+                		<#ERROR name="ERRORESPNumber">
+                		<b>OCLC or Docline UI Number</b>
+                		<input id="ESPNumber" name="ESPNumber" type="text" size="20" class="f-name" tabindex="9" value="<#PARAM name="ESPNumber">"><br />
+                	</label>
+					
+                	<label for="NotWantedAfter">
+                		<#ERROR name="ERRORNotWantedAfter">
+                		<b><span class="req">*</span>Not Wanted After Date <span class="note">(MM/DD/YYYY)</span></b>
+                		<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name" tabindex="10" value="<#PARAM name="NotWantedAfter">"><br />
+                	</label>
+					
+                	<label for="AcceptNonEnglish">
+                		<#ERROR name="ERRORAcceptNonEnglish">
+                		<b>Will you accept the item in a language other than English?<br />
+                		<span class="note">If yes, specify acceptable languages in the notes field.</span></b>
+                		<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name" tabindex="11">
+                    		<option selected><#PARAM name="AcceptNonEnglish"></option>
+                    		<option>No</option>
+                    		<option>Yes</option>
+                		</select>
+						<br />
+                	</label>
+					
+                	<label for="AcceptAlternateEdition">
+                		<#ERROR name="ERRORAcceptAlternateEdition">
+                		<b>Will you accept an alternate edition of this item?</b>
+                		<select id="AcceptAlternateEdition" name="AcceptAlternateEdition" size="1" class="f-name" tabindex="12">
+                    		<option selected><#PARAM name="AcceptAlternateEdition"></option>
+                    		<option>No</option>
+                    		<option>Yes</option>
+                		</select>
+                		<br />
+                	</label>
+					
+                	<!--<label for="ValidAccountsDropDown">
+                		<#ERROR name="ERRORValidAccountsDropDown">
+                		<b>Account Number</b>
+                		<select id="ValidAccountsDropDown" name="ValidAccountsDropDown" size="1" class="f-name" tabindex="13">
+                    		<#OPTION name="ValidAccounts">
+                		</select>
+                		<br />
+                	</label>-->
+					
+                	<label for="Notes">
+                		<#ERROR name="ERRORNotes">
+                		<b>Notes<br />
+                		<span class="note">Put any information here that may help us find the item, as well as any other pertinent information.</span></b>
+                		<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name" tabindex="14"><#PARAM name="Notes"></textarea>
+                		<br />
+                	</label>
+					
+                	<#INCLUDE filename="include_request_cited.html">                
+                    <#INCLUDE filename="include_request_buttons.html">
+                </fieldset>
+            </form>
+            <#INCLUDE filename="include_footer.html">

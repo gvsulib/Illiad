@@ -13,70 +13,71 @@
 
 <p style="font-size: 1.2em;"><strong>We cannot order textbooks through Document Delivery.</strong></p>
 
-<div class="row">
-<div class="span3">
+<div class="row row-gutter">
+<div class="col-12">
 <!-- Book author input -->
 <label for="LoanAuthor"><span class="req">*</span> <span class="<#ERROR name="ERRORLoanAuthor">">Author(s) / Editor(s)</span></label>
 <input id="LoanAuthor" name="LoanAuthor" tabindex="1" type="text" value="<#PARAM name="LoanAuthor">" />
 </div>
 </div>
 
-<div class="row">
-<div class="span3">
+<div class="row row-gutter">
+<div class="col-12">
 <!-- Book title input -->
 <label for="LoanTitle"><span class="req">*</span> <span class="<#ERROR name="ERRORLoanTitle">">Title</span></label>
 <p style="margin:0;padding:0;">Please do not abbreviate</p>
 <textarea id="LoanTitle" name="LoanTitle" tabindex="2"><#PARAM name="LoanTitle"></textarea>
+<div id="melCheck"></div>
 </div>
 </div>
 
-<div class="row">
-<div class="span1">
+<div class="row row-gutter">
+<div class="col-4 cml-sm-12">
 <!-- Book publisher input -->
 <label for="LoanPublisher"><span class="<#ERROR name="ERRORLoanPublisher">">Publisher</span></label>
 <input id="LoanPublisher" name="LoanPublisher" tabindex="3" type="text" value="<#PARAM name="LoanPublisher">" />
 </div>
-<div class="span1">				
+<div class="col-4 cml-sm-12">				
 <!-- Book publication place input -->
 <label for="LoanPlace"><span class="<#ERROR name="ERRORLoanPlace">">Place of Publication</span></label>
 <input id="LoanPlace" name="LoanPlace" tabindex="4" type="text" value="<#PARAM name="LoanPlace">" />
 </div>
-<div class="span1">
+<div class="col-4 cml-sm-12">
 <!-- Book publication date input -->
 <label for="LoanDate"><span class="<#ERROR name="ERRORLoanDate">">Date of Publication</span></label>
 <input id="LoanDate" name="LoanDate" tabindex="5" type="text" value="<#PARAM name="LoanDate">" />
 </div>
 </div>
 
-<div class="row">
+<div class="row row-gutter">
 <!-- ISBN input -->
-<div class="span1">
+<div class="col-4 cml-sm-12">
 <label for="ISSN"><span class="<#ERROR name="ERRORISSN">"><abbr title="International Standard Book Number">ISBN</abbr></span></label>
 <input id="ISSN" name="ISSN" tabindex="7" type="text" value="<#PARAM name="ISSN">" placeholder="This helps us get the item faster" />
 </div>
 
 
 <!-- OCLC or Docline UI Number -->
-<div class="span1">
+<div class="col-4 cml-sm-12">
 <label for="ESPNumber"><span class="<#ERROR name="ERRORESPNumber">"><abbr title="Online Computer Library center">OCLC</abbr> or Docline <abbr title="Unique Identifier">UI</a> Number</span></label>
 <input id="ESPNumber" name="ESPNumber" tabindex="8" type="text" value="<#PARAM name="ESPNumber">">
 </div>
 					
 <!-- Call number input -->
-<div class="span1">
+<div class="col-4 cml-sm-12">
 <label for="CallNumber"><span class="<#ERROR name="ERRORCallNumber">">Call Number</span></label>
 <input id="CallNumber" name="CallNumber" tabindex="9" type="text" value="<#PARAM name="CallNumber">" />
 </div>
 
 </div>
 
-<div class="row">
-<div class="span2">
+<div class="row row-gutter">
+<div class="col-8 cml-sm-12">
 <!-- Book publication edition input -->
 <label for="LoanEdition"><span class="<#ERROR name="ERRORLoanEdition">">Edition</span></label>
 <input id="LoanEdition" name="LoanEdition" tabindex="6" type="text" value="<#PARAM name="LoanEdition">" />
 </div>
-<div class="span1">
+<div class="col-4 cml-sm-12">
 <label for="AcceptAlternateEdition"><span class="<#ERROR name="ERRORAcceptAlternateEdition">">Alternate edition okay?</span></label>
 <select id="AcceptAlternateEdition" name="AcceptAlternateEdition" tabindex="11">
 	
@@ -93,13 +94,13 @@
 </div>
 </div>
 
-<div class="row">
-<div class="span1">
+<div class="row row-gutter">
+<div class="col-4 cml-sm-12">
 <label for="NotWantedAfter"><span class="req">*</span> <span class="<#ERROR name="ERRORNotWantedAfter">">Not Wanted After Date</span></label>
 <p style="margin:0;padding:0;">(MM/DD/YYYY)</p>
 <input id="NotWantedAfter" name="NotWantedAfter" tabindex="13" type="text" value="<#PARAM name="NotWantedAfter">" />
 </div>
-<div class="span2">
+<div class="col-8 cml-sm-12">
 <label for="AcceptNonEnglish"><span class="<#ERROR name="ERRORAcceptNonEnglish">">Language other than English okay?</span></label>
 <p style="margin:0;padding:0;">Specify acceptable languages in the notes field.</p>
 <select id="AcceptNonEnglish" name="AcceptNonEnglish" tabindex="12">
@@ -117,8 +118,8 @@
 </div>
 </div>
 
-<div class="row">
-<div class="span3">
+<div class="row row-gutter">
+<div class="col-12">
 <!-- Notes input -->
 <label for="Notes"><span class="<#ERROR name="ERRORNotes">">Notes</span></label>
 <p style="margin:0;padding:0;">Put any information here that may help us find the item.</p>
@@ -133,3 +134,32 @@
 
 </form>
 <#INCLUDE filename="include_footer.html">
+
+<script>
+
+// When title has been entered, run function
+$(document).ready(function() {
+$('#LoanTitle').change(function() {
+
+	var title = encodeURIComponent($(this).val());
+
+	$.ajax({
+    	method: "POST",
+    	crossdomain: true,
+    	url: "https://prod.library.gvsu.edu/labs/illiadtomel/index.php",
+    	data: {t: title}
+	})
+	.done(function(msg) {
+    	console.log('Data returned:' + msg);
+    	$('#melCheck').html(msg);
+
+    	$('#mel-redirect').click(function() {
+    		_gaq.push(['_trackEvent', 'Events', 'MeL Redirect', '1']);
+    	});
+
+
+	});
+});
+
+});
+</script>

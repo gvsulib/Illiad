@@ -11,15 +11,15 @@
 
 <h4>Thesis Request</h4>
 
-<div class="line">
-<div class="span1 unit">
+<div class="row row-gutter">
+<div class="col-12">
 <!-- Thesis author input -->
 <label for="LoanAuthor"><span class="<#ERROR name="ERRORLoanAuthor">">Author</span></label>
 <input id="LoanAuthor" name="LoanAuthor" tabindex="1" type="text" value="<#PARAM name="LoanAuthor">" />		</div>
 </div>			
 
-<div class="line">
-<div class="span1 unit">
+<div class="row row-gutter">
+<div class="col-12">
 <!-- Thesis title input -->					
 <label for="LoanTitle"><span class="req">*</span> <span class="<#ERROR name="ERRORLoanTitle">">Title</span></label>
 <p style="margin:0;padding:0;">Please do not abbreviate</p>
@@ -27,45 +27,45 @@
 </div>
 </div>
 
-<div class="line">
-<div class="span1 unit">
+<div class="row row-gutter">
+<div class="col-12">
 <!-- Thesis School input -->
 <label for="LoanPublisher"><span class="<#ERROR name="ERRORLoanPublisher">">School</span></label>
 <input id="LoanPublisher" name="LoanPublisher" tabindex="3" type="text" value="<#PARAM name="LoanPublisher">" />
 </div>
 </div>						
 
-<div class="line">
+<div class="row row-gutter">
 <!-- Thesis Year input -->
-<div class="span2 unit left">									
+<div class="col-6 col-sm-12">									
 <label for="LoanDate"><span class="<#ERROR name="ERRORLoanDate">">Year</span></label>
 <input id="LoanDate" name="LoanDate" tabindex="4" type="text" value="<#PARAM name="LoanDate">" />
 </div>						
 
 <!-- Thesis Degree input -->
-<div class="span2 unit left lastUnit">
+<div class="col-6 col-sm-12">
 <label for="LoanEdition"><span class="<#ERROR name="ERRORLoanEdition">">Degree</span></label>
 <input id="LoanEdition" name="LoanEdition" tabindex="5" type="text" value="<#PARAM name="LoanEdition">" />						
 </div>
 </div>
 
-<div class="line">
+<div class="row row-gutter">
 <!-- OCLC Number -->
-<div class="span2 unit left">
+<div class="col-6 col-sm-12">
 <label for="ESPNumber"><span class="<#ERROR name="ERRORESPNumber">"><abbr title="Online Computer Library Center">OCLC</abbr> or Docline <abbr title="Unqiue Identifier">UI</abbr> Number</span></label>
 <input id="ESPNumber" name="ESPNumber" tabindex="6" type="text" value="<#PARAM name="ESPNumber">" />						
 </div>
 
 <!-- Call number input -->	
-<div class="span2 unit left lastUnit">				
+<div class="col-6 col-sm-12">				
 <label for="CallNumber"><span class="<#ERROR name="ERRORCallNumber">">Call Number</span></label>
 <input id="CallNumber" name="CallNumber" tabindex="7" type="text" value="<#PARAM name="CallNumber">" />						
 </div>
 </div>
 <hr />
 
-<div class="line">
-<div class="span1 unit">
+<div class="row row-gutter">
+<div class="col-12">
 <!-- Notes input -->
 <label for="Notes"><span class="<#ERROR name="ERRORNotes">">Notes</span></label>
 <p style="margin:0;padding:0;">Put any information here that may help us find the item.</p>
@@ -73,16 +73,16 @@
 </div>
 </div>
 
-<div class="line">
+<div class="row row-gutter">
 <!-- Not wanted after date -->				
-<div class="span2 unit left">							
+<div class="col-6 col-sm-12">							
 <label for="NotWantedAfter"><span class="req">*</span> <span class="<#ERROR name="ERRORNotWantedAfter">">Not Wanted After Date</span></label>
 <p style="margin:0;padding:0;">(MM/DD/YYYY)</p>
 <input id="NotWantedAfter" name="NotWantedAfter" tabindex="9" type="text" value="<#PARAM name="NotWantedAfter">" />					
 </div>
 
 <!-- Non-English input -->
-<div class="span2 unit left lastUnit">
+<div class="col-6 col-sm-12">
 <label for="AcceptNonEnglish"><span class="<#ERROR name="ERRORAcceptNonEnglish">">Language other than English okay?</span></label>
 <p style="margin:0;padding:0;">Specify acceptable languages in the notes field.</p>
 <select id="AcceptNonEnglish" name="AcceptNonEnglish" tabindex="10">
